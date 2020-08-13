@@ -5,6 +5,6 @@ header:
   image: "/images/zakim.jpg"
 ---
 
-I'm a senior data scientist who excels at data wrangling, machine learning, exploratory analysis, and data visualizations.
+Hello, this portfolio is still under construction.  Special thanks to Michael Rose - mademistakes.com | @mmistakes for the template. 
 
-Etc, etc, etc
+Check back later as I update with cool projects. :)
