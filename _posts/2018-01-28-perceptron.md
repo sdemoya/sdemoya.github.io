@@ -1,7 +1,7 @@
 ---
 title: "Blank Project"
 date: 2020-08-13
-tags: [data wrangling, data science, messy data]
+tags: [data wrangling, data science, python]
 header:
   image: "/images/perceptron/percept.jpg"
 excerpt: "Coming soon..."
@@ -20,7 +20,7 @@ And here's some *italics*
 
 Here's some **bold** text.
 
-What about a [link](https://github.com/dataoptimal)?
+What about a [link](https://github.com/sdemoya)?
 
 Here's a bulleted list:
 * First item
