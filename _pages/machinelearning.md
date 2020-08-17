@@ -1,7 +1,7 @@
 ---
 layout: posts
 permalink: /python/
-title: "Python Project Coming Soon"
+title: "Python"
 author_profile: true
 header:
   image: "/images/fort point.png"
