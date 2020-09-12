@@ -1,6 +1,6 @@
 ---
-title: "Writing"
+title: "Technical Writing"
 permalink: /writing/
 header:
-  image: "/images/zakim.jpg"
+  image: "/images/pineapple-1704339_1920.jpg"
 ---

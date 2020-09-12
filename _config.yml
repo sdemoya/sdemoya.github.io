@@ -85,7 +85,7 @@ analytics:
 # Site Author
 author:
   name             : "Skye de Moya"
-  avatar           : "/images/bio-pic-2.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/headshot_400x400.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Portfolio"
   location         : "Los Angeles, CA"
   email            :
