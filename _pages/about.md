@@ -2,9 +2,10 @@
 title: "About"
 permalink: /about/
 header:
-  image: "/images/pineapple-1704338_1920.jpg"
+  image: "/images/banner-pineapple-1704338_1920.jpg"
 ---
 
-Hello, this portfolio is still under construction.  Special thanks to Michael Rose - mademistakes.com | @mmistakes for the template. 
+Pardon my dust and typos while I build out this portfolio. With time you'll be able to see a collection of technical writing, python projects and cloud infrastructure know-how.
 
-Check back later as I update with cool projects. :)
+Special thanks to Michael Rose for the template. mademistakes.com | @mmistakes
+Special thanks to pineapplesupplyco & Alexas_Fotos on pixabay.com for the photos.

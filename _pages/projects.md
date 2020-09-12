@@ -4,7 +4,13 @@ permalink: /projects/
 title: "Projects"
 author_profile: true
 header:
-  image: "/images/pineapple-1704339_1920.jpg"
+  image: "/images/banner-pineapple-1704339_1920.jpg"
+---
+
+Pardon my dust and typos while I build out this portfolio. With time you'll be able to see a collection of technical writing, python projects and cloud infrastructure know-how.
+
+Special thanks to Michael Rose for the template. mademistakes.com | @mmistakes
+
 ---
 
 {% include base_path %}
