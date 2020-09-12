@@ -1,5 +1,6 @@
-# Build a Serverless Site with Dynamic Content using Lambda, API Gateway, S3 and Route53
-
+# Build a Serverless Site with Static and Dynamic Content
+# Using Lambda, API Gateway, S3 and Route53
+_____
 In this tutorial, you will learn how to deploy a serverless website utilizing Lambda, API Gateway, S3 and Route53. The use of Route53 is optional if you do not wish you use your own domain name. 
 
 In order to follow along you will need:
@@ -7,13 +8,13 @@ In order to follow along you will need:
 	- basic understanding HTML
 	- text editor 
 
-### Step 1: Login to the AWS Management Console.
+### Step 1: Login to the AWS Management Console. <br
 
 ### Step 2: Navigate to S3.
 
 ### Step 3: Create a new bucket in S3.
 - Click **Create a Bucket**
-- Name your bucket. *Note: If you intend to use your own domain name, the bucket name must match the domain name exactly.*       
+- Name your bucket. *Note: If you intend to use your own domain name, the bucket name must match the top-level domain name exactly.*       
 
 ### Step 3b:Make the bucket public.  
 Make Bucket Public: If you are using an existing bucket, you can make it public.
