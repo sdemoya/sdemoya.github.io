@@ -12,9 +12,8 @@ In order to follow along you will need:
 ### Step 2: Navigate to S3.
 
 ### Step 3: Create a new bucket in S3.
-	- Click **Create a Bucket**
-	- Name your bucket. 
-	*Note: If you intend to use your own domain name, the bucket name must match the domain name exactly.*       
+- Click **Create a Bucket**
+- Name your bucket. *Note: If you intend to use your own domain name, the bucket name must match the domain name exactly.*       
 
 ### Step 3b:Make the bucket public.  
 Make Bucket Public: If you are using an existing bucket, you can make it public.
