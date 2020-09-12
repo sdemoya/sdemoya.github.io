@@ -1,4 +1,4 @@
-#Build a Serverless Site with Dynamic Content using Lambda, API Gateway, S3 and Route53
+# Build a Serverless Site with Dynamic Content using Lambda, API Gateway, S3 and Route53
 
 In this tutorial, you will learn how to deploy a serverless website utilizing Lambda, API Gateway, S3 and Route53. The use of Route53 is optional if you do not wish you use your own domain name. 
 
