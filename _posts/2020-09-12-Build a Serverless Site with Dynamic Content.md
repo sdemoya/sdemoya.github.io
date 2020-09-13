@@ -7,10 +7,9 @@ header:
 excerpt: "Serverless, Lambda, API Gateway, S3, Route53"
 mathjax: "true"
 ---
-# Build a Serverless Site with Static and Dynamic Content
-# Using Lambda, API Gateway, S3 and Route53
+# Build a Serverless Site with Static and Dynamic Content Using Lambda, API Gateway, S3 and Route53
 _____
-In this tutorial, you will learn how to deploy a serverless website utilizing Lambda, API Gateway, S3 and Route53. The use of Route53 is optional if you do not wish you use your own domain name. 
+In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting and Lambda and API Gateway to deliver dynamic content. Route53 may also be used to register and connect a domain name.
 
 In order to follow along you will need:
 	- an AWS account
@@ -23,7 +22,7 @@ In order to follow along you will need:
 
 ### Step 3: Create a new bucket in S3.
 - Click **Create a Bucket**
-- Name your bucket. *Note: If you intend to use your own domain name, the bucket name must match the top-level domain name exactly.*       
+- Name your bucket. *Note: If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc)*       
 
 ### Step 3b:Make the bucket public.  
 Make Bucket Public: If you are using an existing bucket, you can make it public.
@@ -33,39 +32,21 @@ Make Bucket Public: If you are using an existing bucket, you can make it public.
 ### Step 4:  Enable Static Web Hosting
 - Click on the bucket name.
 - Select **Properties** in in the top menu bar.
-> properties 
-
-> configure static website hosting
-
-index.html
-
-error.html
-
-> save
+- Select configure static website hosting
+-- index.html
+-- error.html
+-- save
 
 
-
-### Route53 OPTIONAL STEP
-
-### Step X: Navigate to Route 53
-
-Step X:  OPTIONAL Register a Domain Name (Can take up to 72 hours)
-
-ALT you can use s3 bucket url
-
-check availability remember top level domain (part before .com/.org) must match bucket name
-
-register
+### Step 5: Domain Registry (Optional)
+- Navigate to Route53
+- If you haven't already, register your domain name and remember if must match the bucket name.  This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
 
 
+### Step 6:  Open Lambda Console (Under Compute) *Note which region you are in.*
 
-Lambda
-
-Step X:  Open Lambda Console (Under Compute) Note the region you are in.
-
-
-
-Step X: Select Create a Function.
+### Step 7: Create a Function
+- Select Create a Function.
 
 a. Select Author from scratch
 
@@ -86,8 +67,7 @@ iii. Search for the 'Simple Microservice permissions' policy template
 e. Click Create Function
 
 
-
-Step X:  Change the function's code.
+### Step 8:  Change the function's code.
 
 Once your function has been created you'll see the Designer at the top of the page. Scroll down to IDE, Function code.
 
@@ -121,9 +101,7 @@ Don't forget to click save in the top right corner.
 
 
 
-
-
-Step X: Add triggers
+### Step 9: Add triggers
 
 a. Scroll back up to the Designer 
 
@@ -135,7 +113,7 @@ You will getting a warning that says "Configuration required" - proceed to the n
 
 
 
-Step X:  Configure triggers
+### Step 10:  Configure triggers
 
 The window to configure triggers will appear below Designer.
 
@@ -149,21 +127,16 @@ d. Security, endpoint > open which leaves it open & public Add more sec info
 
 e. click add
 
+  SAVE FUNCTION
 
+### Step 11: Copy the invocation url 
+-Click the expand arrow on Details in the API Gateway box below the design, copy the invocation url (which won't work until we configure it.
 
-Step X:  SAVE FUNCTION
+### Step 12: Click on the title which will open API Gateway
 
-Step X:  Click the expand arrow on Details in the API Gateway box below the design, copy the invocation url (which won't work until we configure it.
+### Step 13: Delete default method
 
-
-
-API GATEWAY
-
-Step X: Click on the title which will open API Gateway
-
-Step X: Delete default method
-
-Step X: Create New Method
+### Step 14: Create New Method
 
 a. From Actions drop down menu select create new method
 
@@ -184,8 +157,7 @@ h. leave default timeout selected
 i. save (you will see confirmation window with arn of the lambda) confirm 
 
 
-
-Step X: Deploy API
+### Step 15: Deploy API
 
 a. Actions > Deploy API
 
@@ -196,10 +168,7 @@ c. Description : serverless website etc
 d. click deploy - and you will be takes to the Stages page with API Gateway
 
 
-
-
-
-Step X: Stages
+### Step 16: Stages
 
 a. clicking deploy in the previous step will automatically bring you to this page.  It is also accessible on the left hand menu within API Gateway.
 
@@ -209,13 +178,13 @@ c. invoke url - copy this for the next step
 
 
 
-HTML
+### HTML FILES
 
-Step X: Add the invoke url to your html file.
+### Step X: Add the invoke url to your html file.
 
  change the    `xhttp.open(<invoke-url>, true):`
 
-Step X:  Upload html/code to S3.
+### Step X:  Upload html/code to S3.
 
 a. Navigate to S3.
 
@@ -231,17 +200,17 @@ f. confirm by clicking 'make public'
 
 
 
-Route53 OPTIONAL
+### Route53 OPTIONAL
 
-Step X: Navigate to Route53, under Networking
+### Step X: Navigate to Route53, under Networking
 
-Step X: Hosted Zones
+### Step X: Hosted Zones
 
 a. click hosted zones
 
 b.  select domain
 
-Step X: Create Record Set
+### Step X: Create Record Set
 
 a. click it
 
@@ -253,8 +222,8 @@ c. click create - creates A record
 
 
 
-Step X: Visit your site.
+### Step X: Visit your site.
 
 Go to domain or s3 URL to test! Click button sends request to to API Gateway.
 
-remember give the dns cache time to clear before testing it 
+Remember to give the DNS cache time to clear before testing it.
