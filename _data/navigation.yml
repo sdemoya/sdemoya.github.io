@@ -4,7 +4,7 @@ main:
     url: /about/
   - title: "Projects - Coming Soon"
     url: /projects/
-  # - title: "About"
+    - title: "About"
   #   url: /about/
   # - title: "Technical Writing"
   #   url: /tech-writing/
