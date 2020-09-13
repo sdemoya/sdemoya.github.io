@@ -1,7 +1,7 @@
 ---
 title: "Build a Severless Site"
 date: 2020-09-12
-tags: [tech-writing, aws]
+tags: [writing, aws]
 header:
   image: "/images/banner-binary-3441007_1920.jpg"
 excerpt: "Serverless, Lambda, API Gateway, S3, Route53"
