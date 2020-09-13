@@ -7,7 +7,7 @@ header:
 excerpt: "Serverless, Lambda, API Gateway, S3, Route53"
 mathjax: "true"
 ---
-# Build a Serverless Site with Static and Dynamic Content Using Lambda, API Gateway, S3 and Route53
+# Deploy a Serverless Site with Static and Dynamic Content Using Lambda, API Gateway, S3 and Route53
 _____
 In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting and Lambda and API Gateway to deliver dynamic content. Route53 may also be used to register and connect a domain name.
 
@@ -16,13 +16,15 @@ In order to follow along you will need:
 	- basic understanding HTML
 	- text editor 
 
-### Step 1: Login to the AWS Management Console. <br
+### Step 1: Login to the AWS Management Console.
 
 ### Step 2: Navigate to S3.
 
 ### Step 3: Create a new bucket in S3.
 - Click **Create a Bucket**
-- Name your bucket. *Note: If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc)*       
+- Name your bucket. 
+-- If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc) 
+-- Additionally, remember that bucket names must be globally unique. (Meaning, across all aws accounts, not just your account.)
 
 ### Step 3b:Make the bucket public.  
 Make Bucket Public: If you are using an existing bucket, you can make it public.
@@ -32,10 +34,12 @@ Make Bucket Public: If you are using an existing bucket, you can make it public.
 ### Step 4:  Enable Static Web Hosting
 - Click on the bucket name.
 - Select **Properties** in in the top menu bar.
-- Select configure static website hosting
+- Select configure static website hosting. Type in index.html and error.html where prompted and then click ***save***.
 -- index.html
 -- error.html
+
 -- save
+
 
 
 ### Step 5: Domain Registry (Optional)
