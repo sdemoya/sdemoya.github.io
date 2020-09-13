@@ -4,7 +4,7 @@ main:
     url: /about/
   - title: "Projects"
     url: /projects/
-    - title: "Technical Writing"
-      url: /tech-writing/
+  - title: "Technical Writing"
+    url: /tech-writing/
   #  - title: "Python"
   #    url: /python/
