@@ -2,13 +2,13 @@
 main:
   - title: "About"
     url: /about/
-  - title: "Projects"
+  - title: "Projects - Coming Soon"
     url: /projects/
-   - title: "Tech Writing"
-     url: /tech-writing/
-   - title: "Python"
-     url: /python/
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  # - title: "About"
+  #   url: /about/
+  # - title: "Technical Writing"
+  #   url: /tech-writing/
+  # - title: "Python"
+  #   url: /python/
   # - title: "Sitemap"
   #   url: /sitemap/
