@@ -302,7 +302,7 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 - Paste the ***Invoke URL*** that you copied in Step 14 replacing "YOUR-API-GATEWAY-LINK" in `xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);`
 
-```{r eval=FALSE}
+```HTML
 <html>
     <head>
         <script>
