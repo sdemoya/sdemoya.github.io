@@ -264,59 +264,127 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step14-api-2.png" alt="AWS Screenshot" width="640">
 
 
+## Step 15: HTML Files.
+- Create an index.html file, as shown below. 
+```
+<html>
+    <head>
+        <script>
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);
+                xhttp.send();
+
+            }
+
+        </script>
+    </head>
+<body>
+    <div align="center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Hello <span id="my-demo">World!</span></h1>
+        <button onclick="myFunction()">Click me</button>
+        <br>
+    </div>
+
+    </body>
+</html>
+```
+- Paste the ***Invoke URL*** that you copied in Step 14 replacing "YOUR-API-GATEWAY-LINK" in `xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);`
+
+```
+<html>
+    <head>
+        <script>
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "https://dci4zny6p2.execute-api.us-west-1.amazonaws.com/default/serverlessSiteFunction", true);
+                xhttp.send();
+
+            }
+
+        </script>
+    </head>
+<body>
+    <div align="center">
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Hello <span id="my-demo">World!</span></h1>
+        <button onclick="myFunction()">Click me</button>
+        <br>
+    </div>
+
+    </body>
+</html>
+```
+
+- Create an error.html file.
+
+```
+<html>
+   <head></head>
+   <body>
+      <h1>404 Page Not Found</h1>
+   </body>
+</html>
+````
+
+## Step 16: Upload your files to your S3 bucket.
+
+- Navigate back to S3.
+
+- Click on your bucket.
+
+- Click ***Upload***.
+
+- Drag and drop your html and python files, or use the ***Add files button.***
+
+- Click ***Next***.
+
+- Allow public access to your items under the permissions tab.
+
+- Select storage.
+
+- Click ***Upload***
 
 
+## Step 17: Create a record set for your domain in Route53. (Optional)
+
+- Navigate to ***Route53***, under Networking.
+
+- Click on ***Hosted Zones***
+
+- Select your domain.
+
+- Click ***Create Record Set***
+
+- Select ***Alias*** and your s3 website should auto-populate. If it does not auto-populate that means that your bucket name and domain name do not match. Refer back to Step 5.
+
+- Click ***Create***. This will create an A record.
+
+- Give the DNS cache time to update and then your website should be visible from your domain.
 
 
+## Step 18: Visit your site!
 
+- If you need to access the S3 static website hosting URL, you can always get it under ***Properites*** within your bucket.
 
-
-### HTML FILES
-
-### Step X: Add the invoke url to your html file.
-
- change the    `xhttp.open(<invoke-url>, true):`
-
-### Step X:  Upload html/code to S3.
-
-a. Navigate to S3.
-
-b. If you're bucket is not already public, make it so.
-
-c. Upload html files
-
-d. select files
-
-e. Select 'make public' under the 'More' dropdown menu
-
-f. confirm by clicking 'make public'
-
-
-
-### Route53 OPTIONAL
-
-### Step X: Navigate to Route53, under Networking
-
-### Step X: Hosted Zones
-
-a. click hosted zones
-
-b.  select domain
-
-### Step X: Create Record Set
-
-a. click it
-
-b. Select Alias - You s3 website should autopopulate
-
-If it doesn't  - then they don't match.
-
-c. click create - creates A record
-
-
-
-### Step X: Visit your site.
-
+- Great work!
 Go to domain or s3 URL to test! Click button sends request to to API Gateway.
 
 Remember to give the DNS cache time to clear before testing it.
