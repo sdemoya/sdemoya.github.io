@@ -26,7 +26,7 @@ In order to follow along you will need:
 
 ## Step 2: Navigate to S3.
 
-- Navigate to S3 by typing it into the search bar or looking under Storage Services.
+- Navigate to S3 by typing it into the search bar or looking under the ***Services*** drop-down menu under the ***Storage*** category.
 
 
 ## Step 3: Create a new bucket in S3.
