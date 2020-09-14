@@ -60,17 +60,19 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 - Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
 
+- Click ***Edit***. 
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot" width="640">
-
-- Click on ***Edit*** 
-
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
 
 - Uncheck ***Block all public access.***
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640">
 
-- Click ***Save*** then type ***confirm*** into the pop window and then click ***Confirm***.
+- Click ***Save*** in the top right corner. 
+
+- Clicking ***Save*** will prompt a confirmation window. Type ***confirm*** as directed, and then click click ***Confirm***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
