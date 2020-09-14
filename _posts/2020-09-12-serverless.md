@@ -32,12 +32,20 @@ In order to follow along you will need:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
 
-### Step 3b:Make the bucket public.  
-Make Bucket Public: If you are using an existing bucket, you can make it public.
+### Step 3b (Optional): Make your S3 bucket public.  
+If you are using an existing bucket, you must make it public in order to enable static website hosting.
+- Click on the bucket's name within the S3 console.
 
+- Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot">
+
+- Click on ***Edit*** 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot">
+
+- Uncheck ***Block all public access.***
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot">
+
+- Click ***Save*** Then type ***confirm*** into the pop window, and then click ***Confirm***
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot">
 
 ### Step 4:  Enable Static Web Hosting
