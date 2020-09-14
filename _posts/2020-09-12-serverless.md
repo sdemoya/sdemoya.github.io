@@ -114,7 +114,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 - Name you function.
 
-- For runtime select ***Python3.6***.
+- For runtime select ***Python 3.6***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-1.png" alt="AWS Screenshot" width="640">
 
@@ -163,14 +163,14 @@ def lambda_handler(event, context):
 
 ```
 
-- Click ***Save*** within ***Function code.*** This should cause the other ***Save*** function to turn gray.
+- Click ***Save*** within ***Function code***. This should cause the other ***Save*** function to turn gray.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640">
 
 
 ## Step 9: Add Triggers.
 
-- Scroll back up to the ***Designer*** and click on ***Add triggers***
+- Scroll back up to the ***Designer*** and click on ***Add triggers***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-1.png" alt="AWS Screenshot" width="640">
 
@@ -178,7 +178,7 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-2.png" alt="AWS Screenshot" width="640">
 
-- Select ***Rest API***
+- Select ***Rest API***.
 
 - ***Security*** is left open in this demonstration, however, that is not best practices. Refer to [AWS best practices](https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc) for more information, and choose the solution that works best for your use case.
 
