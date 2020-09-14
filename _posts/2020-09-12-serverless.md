@@ -18,23 +18,33 @@ In order to follow along you will need:
 
 ### Step 1: Login to the AWS Management Console.
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot">
+
 ### Step 2: Navigate to S3.
 
-### Step 3: Create a new bucket in S3.
+
+### Step 2: Create a new bucket in S3.
 - Click **Create a Bucket**
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot">
 - Name your bucket. 
--- If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc) 
--- Additionally, remember that bucket names must be globally unique. (Meaning, across all aws accounts, not just your account.)
+    * If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc) 
+    * Additionally, remember that bucket names must be globally unique. (Meaning, across all aws accounts, not just your account.)
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
 
 ### Step 3b:Make the bucket public.  
 Make Bucket Public: If you are using an existing bucket, you can make it public.
 
-#*ADD DETAILS*
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
 
 ### Step 4:  Enable Static Web Hosting
 - Click on the bucket name.
 - Select **Properties** in in the top menu bar.
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
 - Select configure static website hosting. Type in index.html and error.html where prompted and then click ***save***.
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
 -- index.html
 -- error.html
 
