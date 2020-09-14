@@ -7,8 +7,9 @@ header:
 excerpt: "Serverless, Lambda, API Gateway, S3, Route53"
 mathjax: "true"
 ---
-## Deploy a Serverless Website with Lambda, API Gateway, S3 and Route53
+# Deploy a Serverless Website with Lambda, API Gateway, S3 and Route53
 _____
+
 In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting and Lambda and API Gateway to deliver dynamic content. Route53 may also be used to register and connect a domain name.
 
 In order to follow along you will need:
@@ -22,10 +23,13 @@ In order to follow along you will need:
 
 ## Step 2: Navigate to S3.
 
+- Navigate to S3 by typing it into the search bar or looking under Storage Services.
 
 ## Step 2: Create a new bucket in S3.
 - Click **Create a Bucket**
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
+
 - Name your bucket. 
     * If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc) 
     * Additionally, remember that bucket names must be globally unique. (Meaning, across all aws accounts, not just your account.)
