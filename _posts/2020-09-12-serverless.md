@@ -66,13 +66,12 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 - Uncheck ***Block all public access.***
 
+- Click ***Save*** in the top right corner. 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640">
-
-- Click ***Save*** in the top right corner. 
-
 - Clicking ***Save*** will prompt a confirmation window. Type ***confirm*** as directed, and then click click ***Confirm***.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640">
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
@@ -85,7 +84,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-1.png" alt="AWS Screenshot" width="640">
 
-- Select ***Static website hosting.***
+- Select ***Static website hosting***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-2.png" alt="AWS Screenshot" width="640">
 
@@ -95,6 +94,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 
 ## Step 5: Register your domain. (Optional)
+
 - If you haven't already, register your domain name and remember if must match the bucket name. This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
 
 
