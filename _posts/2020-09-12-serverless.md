@@ -89,19 +89,19 @@ If you are using an existing bucket, you must make it public in order to enable 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot" width="640">
 
 
-### Step 5: Domain Registry (Optional)
+## Step 5: Domain Registry (Optional)
 - Navigate to Route53
 - If you haven't already, register your domain name and remember if must match the bucket name. This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
 
 
-### Step 6: Open Lambda Console 
+## Step 6: Open Lambda Console 
 
 - Navigate to Lambda by typing it into the search bar or looking under Compute Services.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
 
 
-### Step 7: Create a Function
+## Step 7: Create a Function
 
 - Click ***Create a Function.***
 
@@ -126,7 +126,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-2.png" alt="AWS Screenshot" width="640">
 
 
-### Step 8:  Update your Lambda Function.
+## Step 8:  Update your Lambda Function.
 
 - Once your function has been created you'll see the ***Designer*** at the top of the page. Scroll down to IDE, ***Function code***.
 
@@ -178,10 +178,12 @@ Please note, ***Security*** is left open in this demonstration, however that is 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640">
 
 
-## Step 10: Copy the invocation url 
--Click the expand arrow on Details in the API Gateway box below the design, copy the invocation url (which won't work until we configure it.
 
-### Step 11: Click on the title which will open API Gateway
+## Step 10: Click on the hyper-linked title of your API. This which will open API Gateway. 
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step10-api-1.png" alt="AWS Screenshot" width="640">
+
+
 
 ### Step 12: Delete default method
 
@@ -204,6 +206,10 @@ g.type function name and it should autopopulate
 h. leave default timeout selected
 
 i. save (you will see confirmation window with arn of the lambda) confirm 
+
+## Step x: Copy ***API endpoint*** URL for later.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/stepx-triggers-1.png" alt="AWS Screenshot" width="640">
 
 
 ### Step 15: Deploy API
