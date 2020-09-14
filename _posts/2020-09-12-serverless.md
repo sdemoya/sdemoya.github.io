@@ -30,13 +30,15 @@ In order to follow along you will need:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
 
-    * Name your bucket. 
-        * If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc. Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all aws accounts, not just your account.
-    * Note the ***Region*** for this bucket.  S3, Lambda, and API Gateway are all regional services.
-    * Uncheck block all public access.
-    * Click ***Create bucket***
-
+- Name your bucket. If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc. Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all aws accounts, not just your account.
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-2.png" alt="AWS Screenshot" width="640">
+
+- Note the ***Region*** for this bucket.  S3, Lambda, and API Gateway are all regional services.
+
+- Uncheck block all public access.
+
+- Click ***Create bucket***
+
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-3.png" alt="AWS Screenshot" width="640">
 
