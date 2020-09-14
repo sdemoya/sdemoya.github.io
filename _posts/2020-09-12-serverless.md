@@ -35,20 +35,26 @@ In order to follow along you will need:
 ### Step 3b:Make the bucket public.  
 Make Bucket Public: If you are using an existing bucket, you can make it public.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot">
 
 ### Step 4:  Enable Static Web Hosting
 - Click on the bucket name.
-- Select **Properties** in in the top menu bar.
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
-- Select configure static website hosting. Type in index.html and error.html where prompted and then click ***save***.
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
--- index.html
--- error.html
 
--- save
+- Select **Properties** in in the top menu bar.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-1.png" alt="AWS Screenshot">
+
+- Select ***Static website hosting.***
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-2.png" alt="AWS Screenshot">
+
+- Type in index.html and error.html where prompted and click ***Save***.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot">
+
 
 
 
