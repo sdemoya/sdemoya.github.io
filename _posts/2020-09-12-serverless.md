@@ -108,19 +108,19 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 ## Step 7: Create a Function.
 
-- Click ***Create a Function.***
+- Click ***Create a Function***.
 
-- Select ***Author from scratch***
+- Select ***Author from scratch***.
 
-- Name you function 
+- Name you function.
 
-- For runtime select ***Python3.6***
+- For runtime select ***Python3.6***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-1.png" alt="AWS Screenshot" width="640">
 
 - Expand ***Choose or create an execution role*** If this is your first time using Lambda you will need to create a new role. 
 
-- Select ***Create a new role from AWS policy templates***
+- Select ***Create a new role from AWS policy templates***.
 
 - Name it.
 
