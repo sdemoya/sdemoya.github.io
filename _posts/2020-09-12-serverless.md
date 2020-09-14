@@ -363,7 +363,7 @@ def lambda_handler(event, context):
 
 - Click ***Upload***.
 
-- Drag and drop your html and python files, or use the ***Add files button.***
+- Drag and drop your html files or use the ***Add files*** button.
 
 - Click ***Next***.
 
@@ -371,7 +371,7 @@ def lambda_handler(event, context):
 
 - Select storage.
 
-- Click ***Upload***
+- Click ***Upload***.
 
 
 ## Step 17: Create a record set for your domain in Route53. (Optional)
@@ -384,7 +384,7 @@ def lambda_handler(event, context):
 
 - Click ***Create Record Set***
 
-- Select ***Alias*** and your s3 website should auto-populate. If it does not auto-populate that means that your bucket name and domain name do not match. Refer back to Step 5.
+- Select ***Alias***. Your S3 website should auto-populate. If it does not auto-populate that means that your bucket name and domain name do not match. Refer back to Step 5.
 
 - Click ***Create***. This will create an A record.
 
@@ -395,6 +395,6 @@ def lambda_handler(event, context):
 
 - If you need to access the S3 static website hosting URL, you can always get it under ***Properites*** within your bucket.
 
-- Click on the button to send a request to API Gateway and display dynamic content.
+- Click on the button on your website. This will send a request to API Gateway and display dynamic content.
 
-- Great work!
+You did it. Well done!
