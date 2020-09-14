@@ -266,7 +266,8 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 ## Step 15: HTML Files.
 - Create an index.html file, as shown below. 
-```
+
+`
 <html>
     <head>
         <script>
@@ -279,9 +280,7 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
                 };
                 xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);
                 xhttp.send();
-
             }
-
         </script>
     </head>
 <body>
@@ -294,13 +293,13 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
         <button onclick="myFunction()">Click me</button>
         <br>
     </div>
-
     </body>
 </html>
-```
+`
+
 - Paste the ***Invoke URL*** that you copied in Step 14 replacing "YOUR-API-GATEWAY-LINK" in `xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);`
 
-```
+`
 <html>
     <head>
         <script>
@@ -313,9 +312,7 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
                 };
                 xhttp.open("GET", "https://dci4zny6p2.execute-api.us-west-1.amazonaws.com/default/serverlessSiteFunction", true);
                 xhttp.send();
-
             }
-
         </script>
     </head>
 <body>
@@ -328,10 +325,9 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
         <button onclick="myFunction()">Click me</button>
         <br>
     </div>
-
     </body>
 </html>
-```
+`
 
 - Create an error.html file.
 
