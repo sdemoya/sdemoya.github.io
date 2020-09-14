@@ -311,7 +311,7 @@ def lambda_handler(event, context):
 
 - Paste the ***Invoke URL*** that you copied in Step 14 replacing "YOUR-API-GATEWAY-LINK" in `xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);`
 
-
+```HTML
 <html>
     <head>
         <script>
@@ -342,7 +342,7 @@ def lambda_handler(event, context):
 
     </body>
 </html>
-
+```
 
 - Create an error.html file.
 
