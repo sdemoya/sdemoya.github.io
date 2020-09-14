@@ -12,10 +12,10 @@ _____
 
 In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting and Lambda and API Gateway to deliver dynamic content. Route53 may also be used to register and connect a domain name.
 
-In order to follow along you will need:
-	- an AWS account
-	- basic understanding HTML
-	- text editor 
+In order to follow along you will need: 
+* an AWS account
+* basic understanding of HTML
+* text editor 
 
 
 ## Step 1: Login to the AWS Management Console.
