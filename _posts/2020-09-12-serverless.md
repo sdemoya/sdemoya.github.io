@@ -76,7 +76,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
 
-## Step 4: Enable Static Web Hosting.
+## Step 4: Enable Static website hosting.
 
 - Click on the bucket name.
 
@@ -95,7 +95,8 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 ## Step 5: Register your domain. (Optional)
 
-- If you haven't already, register your domain name and remember if must match the bucket name. This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
+- If you haven't already, register your domain name. It must match the bucket name. 
+- This process can take up to 72 hours to complete, but it is often finishes before then. As an alernative to registering and connecting a domain name, the S3 bucket will have its own URL.
 
 
 ## Step 6: Navigate to the Lambda console.
