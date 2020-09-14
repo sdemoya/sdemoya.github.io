@@ -108,7 +108,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 ## Step 7: Create a Function.
 
-- Click ***Create a Function***.
+- Click ***Create function***.
 
 - Select ***Author from scratch***.
 
@@ -124,9 +124,9 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 - Name it.
 
-- Search for the 'Simple microservice permissions' policy template
+- Search for the ***Simple microservice permissions*** policy template.
 
-- Click ***Create Function***
+- Click ***Create Function***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-2.png" alt="AWS Screenshot" width="640">
 
