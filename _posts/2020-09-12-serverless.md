@@ -1,5 +1,5 @@
 ---
-title: "Deploy a Severless Website"
+title: "Deploy a Serverless Website"
 date: 2020-09-12
 tags: [writing, aws]
 header:
