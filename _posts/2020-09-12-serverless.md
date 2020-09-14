@@ -31,22 +31,25 @@ In order to follow along you will need:
 
 ## Step 3: Create a new bucket in S3.
 
-- Click **Create a Bucket**
+- Click ***Create Bucket***
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
 
 - Name your bucket. 
-    If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc. 
-    Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all aws accounts, not just your account.
-    Be sure to note the ***Region*** for this bucket.  S3, Lambda, and API Gateway are all regional services.
+
+If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc. 
+
+Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all AWS accounts, not just your account.
+
+Be sure to note the ***Region*** for this bucket.  S3, Lambda, and API Gateway are all regional services.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-2.png" alt="AWS Screenshot" width="640">
 
-- Uncheck block all public access.
+- Uncheck ***Block all public access***. This will bring up a warning and prompt you to acknowledge the risks. Select ***I acknowledge...***
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-3.png" alt="AWS Screenshot" width="640">
 
-- Click ***Create bucket***
+- Click ***Create bucket***.
 
 
 ## Step 3b (Optional): Make your S3 bucket public.
@@ -67,7 +70,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640">
 
-- Click ***Save*** Then type ***confirm*** into the pop window, and then click ***Confirm.***
+- Click ***Save*** then type ***confirm*** into the pop window and then click ***Confirm***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
