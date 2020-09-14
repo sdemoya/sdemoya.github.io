@@ -215,9 +215,9 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-3.png" alt="AWS Screenshot" width="640">
 
-- ***Integration type*** should automatically select ***Lambda Function***
+- ***Integration type*** should automatically select ***Lambda Function***.
 
-- Check 'Use Lambda Proxy integration'
+- Select ***Use Lambda Proxy integration***.
 
 - If you are in the correct region, your Lambda function name will auto populate when you start typing it's titile.
 
@@ -242,9 +242,9 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 - For the deployment stage select ***Default***.
 
-- Description : serverless website etc
+- You can enter whatever description you would like.
 
-- click deploy - and you will be takes to the Stages page with API Gateway
+- Click ***Deploy***, - and you will be takes to the Stages page with API Gateway
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step13-api-2.png" alt="AWS Screenshot" width="640">
 
