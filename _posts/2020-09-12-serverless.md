@@ -192,6 +192,7 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step10-api-2.png" alt="AWS Screenshot" width="640">
 
+
 ## Step 11: Delete the default method.
 
 - With the ***Any*** method highlighted, click on ***Actions.*** 
@@ -234,9 +235,9 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-7.png" alt="AWS Screenshot" width="640">
 
 
-## Step 15: Deploy API.
+## Step 13: Deploy API.
 
-- From the ***Actions*** drop-down menu, click ***Deploy API***
+- From the ***Actions*** drop-down menu, click ***Deploy API***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step13-api-1.png" alt="AWS Screenshot" width="640">
 
@@ -244,18 +245,24 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 - You can enter whatever description you would like.
 
-- Click ***Deploy***, - and you will be takes to the Stages page with API Gateway
+- Click ***Deploy***. This will redirect you to ***Stages***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step13-api-2.png" alt="AWS Screenshot" width="640">
 
 
-### Step 16: Stages
+### Step 14: Stages.
 
-a. clicking deploy in the previous step will automatically bring you to this page.  It is also accessible on the left hand menu within API Gateway.
+- Clicking ***Deploy*** in the Step 15 automatically redirects you to this page. You may also access this page from the left hand menu within ***API Gateway***.
 
-b. select prod
+- Expand ***default***. (Or whatever stage you deployed into in Step 15.)
 
-c. invoke url - copy this for the next step
+- Click on ***Get*** and copy the ***Invoke URL***.
+*Important* If you do not click on the method first, and copy the ***Invoke URL*** from the landing page, your website will not work.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step14-api-1.png" alt="AWS Screenshot" width="640">
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step14-api-2.png" alt="AWS Screenshot" width="640">
+
 
 
 
