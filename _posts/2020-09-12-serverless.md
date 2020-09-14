@@ -384,7 +384,6 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 - If you need to access the S3 static website hosting URL, you can always get it under ***Properites*** within your bucket.
 
-- Great work!
-Go to domain or s3 URL to test! Click button sends request to to API Gateway.
+- Click on the button to send a request to API Gateway and display dynamic content.
 
-Remember to give the DNS cache time to clear before testing it.
+- Great work!
