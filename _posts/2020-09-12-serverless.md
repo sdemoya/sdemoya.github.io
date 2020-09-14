@@ -16,52 +16,52 @@ In order to follow along you will need:
 	- basic understanding HTML
 	- text editor 
 
-### Step 1: Login to the AWS Management Console.
+## Step 1: Login to the AWS Management Console.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot" width="640">
 
-### Step 2: Navigate to S3.
+## Step 2: Navigate to S3.
 
 
-### Step 2: Create a new bucket in S3.
+## Step 2: Create a new bucket in S3.
 - Click **Create a Bucket**
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
 - Name your bucket. 
     * If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc) 
     * Additionally, remember that bucket names must be globally unique. (Meaning, across all aws accounts, not just your account.)
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot" width="640">
 
 ### Step 3b (Optional): Make your S3 bucket public.  
 If you are using an existing bucket, you must make it public in order to enable static website hosting.
 - Click on the bucket's name within the S3 console.
 
 - Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot" width="640">
 
 - Click on ***Edit*** 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
 
 - Uncheck ***Block all public access.***
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640">
 
 - Click ***Save*** Then type ***confirm*** into the pop window, and then click ***Confirm***
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
 ### Step 4:  Enable Static Web Hosting
 - Click on the bucket name.
 
 - Select **Properties** in in the top menu bar.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-1.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-1.png" alt="AWS Screenshot" width="640">
 
 - Select ***Static website hosting.***
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-2.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-2.png" alt="AWS Screenshot" width="640">
 
 - Type in index.html and error.html where prompted and click ***Save***.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot" width="640">
 
 
 
