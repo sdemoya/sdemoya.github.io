@@ -335,14 +335,14 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 - Create an error.html file.
 
-```
+`
 <html>
    <head></head>
    <body>
       <h1>404 Page Not Found</h1>
    </body>
 </html>
-````
+`
 
 ## Step 16: Upload your files to your S3 bucket.
 
