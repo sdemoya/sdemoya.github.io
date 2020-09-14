@@ -30,11 +30,13 @@ In order to follow along you will need:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
 
-- Name your bucket. 
-    * If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. (That is, the part of the domain before .com, .org, .edu, etc) 
-    * Additionally, remember that bucket names must be globally unique. (Meaning, across all aws accounts, not just your account.)
+    * Name your bucket. 
+        * If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc. Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all aws accounts, not just your account.
+    * Uncheck block all public access.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/.png" alt="AWS Screenshot" width="640">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-2.png" alt="AWS Screenshot" width="640">
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-3.png" alt="AWS Screenshot" width="640">
 
 ### Step 3b (Optional): Make your S3 bucket public.  
 If you are using an existing bucket, you must make it public in order to enable static website hosting.
