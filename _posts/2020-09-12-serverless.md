@@ -7,7 +7,7 @@ header:
 excerpt: "Serverless, Lambda, API Gateway, S3, Route53"
 mathjax: "true"
 ---
-# Deploy a Serverless Site with Static and Dynamic Content Using Lambda, API Gateway, S3 and Route53
+## Deploy a Serverless Website with Lambda, API Gateway, S3 and Route53
 _____
 In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting and Lambda and API Gateway to deliver dynamic content. Route53 may also be used to register and connect a domain name.
 
@@ -18,7 +18,7 @@ In order to follow along you will need:
 
 ### Step 1: Login to the AWS Management Console.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot" width="640">
 
 ### Step 2: Navigate to S3.
 
