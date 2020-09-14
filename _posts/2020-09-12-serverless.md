@@ -184,8 +184,7 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640">
 
-
-- Click ***Add***
+- Click ***Add***.
 
 
 ## Step 10: Open API Gateway.
@@ -201,7 +200,7 @@ def lambda_handler(event, context):
 
 ## Step 11: Delete the default method.
 
-- With the ***Any*** method highlighted, click on ***Actions.*** 
+- With the ***Any*** method highlighted, click on ***Actions***.
 
 - Click ***Delete Method*** in the drop-down menu.
 
@@ -226,7 +225,7 @@ def lambda_handler(event, context):
 
 - Select ***Use Lambda Proxy integration***.
 
-- If you are in the correct region, your Lambda function name will auto populate when you start typing it's titile.
+- If you are in the correct region, your Lambda function name will auto populate when you start typing it's title.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-4.png" alt="AWS Screenshot" width="640">
 
