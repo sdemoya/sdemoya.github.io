@@ -49,7 +49,7 @@ In order to follow along you will need:
 - Click ***Create bucket***
 
 
-## Step 3b (Optional): Make your S3 bucket public.  
+## Step 3b (Optional): Make your S3 bucket public.
 
 If you are using an existing bucket, you must make it public in order to enable static website hosting.
 
@@ -72,7 +72,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
 
-## Step 4: Enable Static Web Hosting
+## Step 4: Enable Static Web Hosting.
 
 - Click on the bucket name.
 
@@ -89,19 +89,18 @@ If you are using an existing bucket, you must make it public in order to enable 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot" width="640">
 
 
-## Step 5: Domain Registry (Optional)
-- Navigate to Route53
+## Step 5: Register your domain. (Optional)
 - If you haven't already, register your domain name and remember if must match the bucket name. This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
 
 
-## Step 6: Open Lambda Console 
+## Step 6: Navigate to the Lambda console.
 
 - Navigate to Lambda by typing it into the search bar or looking under Compute Services.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
 
 
-## Step 7: Create a Function
+## Step 7: Create a Function.
 
 - Click ***Create a Function.***
 
@@ -163,7 +162,7 @@ def lambda_handler(event, context):
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640">
 
 
-## Step 9: Add triggers
+## Step 9: Add Triggers.
 
 - Scroll back up to the ***Designer*** and click on ***Add triggers***
 
@@ -173,27 +172,43 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-2.png" alt="AWS Screenshot" width="640">
 
-Please note, ***Security*** is left open in this demonstration, however that is not reccommend for a live site.  Please check see the [AWS best practices](https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc) for more detail. 
+- Select ***Rest API***
+
+- ***Security*** is left open in this demonstration, however, that is not best practices. Refer to [AWS best practices](https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc) for more information, and choose the solution that works best for your use case.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640">
 
 
+- Click ***Add***
 
-## Step 10: Click on the hyper-linked title of your API. This which will open API Gateway. 
+
+## Step 10: Open API Gateway.
+
+- Click on the hyper-linked title of your API.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step10-api-1.png" alt="AWS Screenshot" width="640">
 
+- The link will open API Gateway as shown below.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step10-api-2.png" alt="AWS Screenshot" width="640">
+
+## Step 11: Delete the default method.
+
+- With the ***Any*** method highlighted, click on ***Actions.*** 
+
+- Click ***Delete Method*** in the drop-down menu.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step11-api-1.png" alt="AWS Screenshot" width="640">
+
+- Confirm your delete.
 
 
-### Step 12: Delete default method
+### Step 12: Create New Method.
 
-### Step 13: Create New Method
+- Click ***Actions*** and select ***Create Method*** from the drop-down menu.
 
-a. From Actions drop down menu select create new method
+- Under your function's name, a drop-down menu will be available. Click on ***Get*** and then click on the check mark next to ***Get***.
 
-b. GET from new method drop down
-
-c. click little 'tick' next to GET
 
 d. Integration type: Lambda Function
 
