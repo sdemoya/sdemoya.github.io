@@ -203,39 +203,50 @@ def lambda_handler(event, context):
 - Confirm your delete.
 
 
-### Step 12: Create New Method.
+## Step 12: Create New Method.
 
 - Click ***Actions*** and select ***Create Method*** from the drop-down menu.
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-1.png" alt="AWS Screenshot" width="640">
+
 - Under your function's name, a drop-down menu will be available. Click on ***Get*** and then click on the check mark next to ***Get***.
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-2.png" alt="AWS Screenshot" width="640">
 
-d. Integration type: Lambda Function
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-3.png" alt="AWS Screenshot" width="640">
 
-e. check 'Use Lambda Proxy integration'
+- ***Integration type*** should automatically select ***Lambda Function***
 
-f. select lambda region
+- Check 'Use Lambda Proxy integration'
 
-g.type function name and it should autopopulate
+- If you are in the correct region, your Lambda function name will auto populate when you start typing it's titile.
 
-h. leave default timeout selected
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-4.png" alt="AWS Screenshot" width="640">
 
-i. save (you will see confirmation window with arn of the lambda) confirm 
+- Leave ***Use Default Timeout*** selected.
 
-## Step x: Copy ***API endpoint*** URL for later.
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-5.png" alt="AWS Screenshot" width="640">
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/stepx-triggers-1.png" alt="AWS Screenshot" width="640">
+i. Click ***Save***. This will prompt a confirmation window, which wiill display your Lambda Function's ARN. Click ***Ok.***
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-6.png" alt="AWS Screenshot" width="640">
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-7.png" alt="AWS Screenshot" width="640">
 
 
-### Step 15: Deploy API
+## Step 15: Deploy API.
 
-a. Actions > Deploy API
+- From the ***Actions*** drop-down menu, click ***Deploy API***
 
-b. deployment stage: prod
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step13-api-1.png" alt="AWS Screenshot" width="640">
 
-c. Description : serverless website etc
+- For the deployment stage select ***Default***.
 
-d. click deploy - and you will be takes to the Stages page with API Gateway
+- Description : serverless website etc
+
+- click deploy - and you will be takes to the Stages page with API Gateway
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step13-api-2.png" alt="AWS Screenshot" width="640">
 
 
 ### Step 16: Stages
@@ -245,6 +256,11 @@ a. clicking deploy in the previous step will automatically bring you to this pag
 b. select prod
 
 c. invoke url - copy this for the next step
+
+
+
+
+
 
 
 
