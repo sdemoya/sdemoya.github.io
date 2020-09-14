@@ -259,14 +259,14 @@ def lambda_handler(event, context):
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step13-api-2.png" alt="AWS Screenshot" width="640">
 
 
-### Step 14: Stages.
+## Step 14: Stages.
 
-- Clicking ***Deploy*** in the Step 15 automatically redirects you to this page. You may also access this page from the left hand menu within ***API Gateway***.
+- Clicking ***Deploy*** in Step 13 automatically redirects you to this page. You may also access this page from the left hand menu within ***API Gateway***.
 
-- Expand ***default***. (Or whatever stage you deployed into in Step 15.)
+- Expand ***default***. 
 
 - Click on ***Get*** and copy the ***Invoke URL***.
-*Important* If you do not click on the method first, and copy the ***Invoke URL*** from the landing page, your website will not work.
+*Important*: If you do not click on the method before you copy the ***Invoke URL*** and instead, copy the ***Invoke URL*** from the landing page, your website will not work.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step14-api-1.png" alt="AWS Screenshot" width="640">
 
