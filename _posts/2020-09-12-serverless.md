@@ -168,9 +168,9 @@ def lambda_handler(event, context):
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640">
 
 
-## Step 9: Add Triggers.
+## Step 9: Add Trigger.
 
-- Scroll back up to the ***Designer*** and click on ***Add triggers***.
+- Scroll back up to the ***Designer*** and click on ***Add trigger***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-1.png" alt="AWS Screenshot" width="640">
 
@@ -180,7 +180,7 @@ def lambda_handler(event, context):
 
 - Select ***Rest API***.
 
-- ***Security*** is left open in this demonstration, however, that is not best practices. Refer to [AWS best practices](https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc) for more information, and choose the solution that works best for your use case.
+- ***Security*** is left open in this demonstration, however, that is not best practice. Refer to [AWS best practices](https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc) for more information and choose the solution that works best for your use case.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640">
 
@@ -200,7 +200,9 @@ def lambda_handler(event, context):
 
 ## Step 11: Delete the default method.
 
-- With the ***Any*** method highlighted, click on ***Actions***.
+- Click the ***Any*** method to highlight it under your Lambda function's name. 
+
+- Click on ***Actions***.
 
 - Click ***Delete Method*** in the drop-down menu.
 
@@ -215,9 +217,11 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-1.png" alt="AWS Screenshot" width="640">
 
-- Under your function's name, a drop-down menu will be available. Click on ***Get*** and then click on the check mark next to ***Get***.
+- Under your function's name, a drop-down menu will be available.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-2.png" alt="AWS Screenshot" width="640">
+
+- Click on ***Get*** and then click on the check mark next to ***Get***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-3.png" alt="AWS Screenshot" width="640">
 
@@ -225,7 +229,7 @@ def lambda_handler(event, context):
 
 - Select ***Use Lambda Proxy integration***.
 
-- If you are in the correct region, your Lambda function name will auto populate when you start typing it's title.
+- If you are in the correct region, your Lambda function's name will auto populate when you start typing its title.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-4.png" alt="AWS Screenshot" width="640">
 
@@ -233,7 +237,7 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-5.png" alt="AWS Screenshot" width="640">
 
-i. Click ***Save***. This will prompt a confirmation window, which will display your Lambda Function's ARN. Click ***Ok.***
+i. Click ***Save***. This will prompt a confirmation window, which will display your Lambda Function's ARN. Click ***Ok***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-6.png" alt="AWS Screenshot" width="640">
 
