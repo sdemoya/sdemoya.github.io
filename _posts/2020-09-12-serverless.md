@@ -17,13 +17,17 @@ In order to follow along you will need:
 	- basic understanding HTML
 	- text editor 
 
+
 ## Step 1: Login to the AWS Management Console.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot" width="640">
 
+
+
 ## Step 2: Navigate to S3.
 
 - Navigate to S3 by typing it into the search bar or looking under Storage Services.
+
 
 ## Step 3: Create a new bucket in S3.
 
@@ -46,7 +50,9 @@ In order to follow along you will need:
 
 
 ## Step 3b (Optional): Make your S3 bucket public.  
+
 If you are using an existing bucket, you must make it public in order to enable static website hosting.
+
 - Click on the bucket's name within the S3 console.
 
 - Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
@@ -65,7 +71,8 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
-## Step 4:  Enable Static Web Hosting
+
+## Step 4: Enable Static Web Hosting
 
 - Click on the bucket name.
 
@@ -87,11 +94,12 @@ If you are using an existing bucket, you must make it public in order to enable 
 - If you haven't already, register your domain name and remember if must match the bucket name. This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
 
 
-### Step 6:  Open Lambda Console 
+### Step 6: Open Lambda Console 
 
 - Navigate to Lambda by typing it into the search bar or looking under Compute Services.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
+
 
 ### Step 7: Create a Function
 
@@ -117,11 +125,14 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-2.png" alt="AWS Screenshot" width="640">
 
-### Step 8:  Change the function's code.
 
-Once your function has been created you'll see the Designer at the top of the page. Scroll down to IDE, Function code.
+### Step 8:  Update your Lambda Function.
 
-a. Delete boiler plate and replace with the below. 
+- Once your function has been created you'll see the ***Designer*** at the top of the page. Scroll down to IDE, ***Function code***.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640">
+
+- Delete boiler plate and replace with the below. 
 
 ```
 
@@ -147,8 +158,9 @@ def lambda_handler(event, context):
 
 ```
 
-Don't forget to click save in the top right corner.
+- Click ***Save***
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-2.png" alt="AWS Screenshot" width="640">
 
 
 ### Step 9: Add triggers
