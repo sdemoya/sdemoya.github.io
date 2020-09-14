@@ -101,7 +101,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 ## Step 6: Navigate to the Lambda console.
 
-- Navigate to Lambda by typing it into the search bar or looking under Compute Services.
+- Navigate to Lambda by typing it into the search bar or looking under the ***Services*** drop-down menu under the ***Compute*** category.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
 
