@@ -237,7 +237,7 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-5.png" alt="AWS Screenshot" width="640">
 
-i. Click ***Save***. This will prompt a confirmation window, which will display your Lambda Function's ARN. Click ***Ok***.
+- Click ***Save***. This will prompt a confirmation window, which will display your Lambda Function's ARN. Click ***OK***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step12-api-6.png" alt="AWS Screenshot" width="640">
 
