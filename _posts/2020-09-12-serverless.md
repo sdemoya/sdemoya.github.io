@@ -267,7 +267,7 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 ## Step 15: HTML Files.
 - Create an index.html file, as shown below. 
 
-```{r eval=FALSE}
+``` HTML
 <html>
     <head>
         <script>
@@ -302,7 +302,7 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
 - Paste the ***Invoke URL*** that you copied in Step 14 replacing "YOUR-API-GATEWAY-LINK" in `xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);`
 
-```HTML
+
 <html>
     <head>
         <script>
@@ -333,7 +333,7 @@ i. Click ***Save***. This will prompt a confirmation window, which wiill display
 
     </body>
 </html>
-```
+
 
 - Create an error.html file.
 
