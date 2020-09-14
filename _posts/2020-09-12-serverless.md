@@ -130,7 +130,7 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 - Once your function has been created you'll see the ***Designer*** at the top of the page. Scroll down to IDE, ***Function code***.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640">
+
 
 - Delete boiler plate and replace with the below. 
 
@@ -158,47 +158,34 @@ def lambda_handler(event, context):
 
 ```
 
-- Click ***Save***
+- Click ***Save*** within ***Function code.*** This should cause the other ***Save*** function to turn gray.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-2.png" alt="AWS Screenshot" width="640">
-
-
-### Step 9: Add triggers
-
-a. Scroll back up to the Designer 
-
-b. click Add triggers
-
-c. add API Gateway 
-
-You will getting a warning that says "Configuration required" - proceed to the next step
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640">
 
 
+## Step 9: Add triggers
 
-### Step 10:  Configure triggers
+- Scroll back up to the ***Designer*** and click on ***Add triggers***
 
-The window to configure triggers will appear below Designer.
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-1.png" alt="AWS Screenshot" width="640">
 
-a. Under API dropdown, select Create a new API
+- Add ***API Gateway*** as a trigger.  
 
-b. API name
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-2.png" alt="AWS Screenshot" width="640">
 
-c. Deployment stage, select production
+Please note, ***Security*** is left open in this demonstration, however that is not reccommend for a live site.  Please check see the [AWS best practices](https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&cards-all.sort-order=desc) for more detail. 
 
-d. Security, endpoint > open which leaves it open & public Add more sec info
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640">
 
-e. click add
 
-  SAVE FUNCTION
-
-### Step 11: Copy the invocation url 
+## Step 10: Copy the invocation url 
 -Click the expand arrow on Details in the API Gateway box below the design, copy the invocation url (which won't work until we configure it.
 
-### Step 12: Click on the title which will open API Gateway
+### Step 11: Click on the title which will open API Gateway
 
-### Step 13: Delete default method
+### Step 12: Delete default method
 
-### Step 14: Create New Method
+### Step 13: Create New Method
 
 a. From Actions drop down menu select create new method
 
