@@ -25,7 +25,8 @@ In order to follow along you will need:
 
 - Navigate to S3 by typing it into the search bar or looking under Storage Services.
 
-## Step 2: Create a new bucket in S3.
+## Step 3: Create a new bucket in S3.
+
 - Click **Create a Bucket**
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
@@ -49,15 +50,19 @@ If you are using an existing bucket, you must make it public in order to enable 
 - Click on the bucket's name within the S3 console.
 
 - Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot" width="640">
 
 - Click on ***Edit*** 
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
 
 - Uncheck ***Block all public access.***
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640">
 
-- Click ***Save*** Then type ***confirm*** into the pop window, and then click ***Confirm***
+- Click ***Save*** Then type ***confirm*** into the pop window, and then click ***Confirm.***
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
 ### Step 4:  Enable Static Web Hosting
