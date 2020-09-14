@@ -45,7 +45,7 @@ In order to follow along you will need:
 - Click ***Create bucket***
 
 
-### Step 3b (Optional): Make your S3 bucket public.  
+## Step 3b (Optional): Make your S3 bucket public.  
 If you are using an existing bucket, you must make it public in order to enable static website hosting.
 - Click on the bucket's name within the S3 console.
 
@@ -65,7 +65,8 @@ If you are using an existing bucket, you must make it public in order to enable 
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640">
 
-### Step 4:  Enable Static Web Hosting
+## Step 4:  Enable Static Web Hosting
+
 - Click on the bucket name.
 
 - Select **Properties** in in the top menu bar.
@@ -81,35 +82,39 @@ If you are using an existing bucket, you must make it public in order to enable 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot" width="640">
 
 
-
-
 ### Step 5: Domain Registry (Optional)
 - Navigate to Route53
-- If you haven't already, register your domain name and remember if must match the bucket name.  This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
+- If you haven't already, register your domain name and remember if must match the bucket name. This process can take up to 72 hours to complete, but it often finished before then. As an alernative to registering and connecting a domain name, the S3 bucket will have it's own URL.
 
 
-### Step 6:  Open Lambda Console (Under Compute) *Note which region you are in.*
+### Step 6:  Open Lambda Console 
+
+- Navigate to Lambda by typing it into the search bar or looking under Compute Services.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
 
 ### Step 7: Create a Function
+
 - Select Create a Function.
 
-a. Select Author from scratch
+- Select Author from scratch
 
-b. Name you function 
+- Name you function 
 
-c. For runtime select Python3.8
+- For runtime select Python3.6
 
-d. Select role
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-1.png" alt="AWS Screenshot" width="640">
 
-If this is your first time using Lambda you will need to create a new role.
+- Select role. If this is your first time using Lambda you will need to create a new role.
 
-i. Create New Role from Template
+    i. Create New Role from Template
 
-ii. give it a name, ie myLambdaRole
+    ii. give it a name, ie myLambdaRole
 
-iii. Search for the 'Simple Microservice permissions' policy template
+    iii. Search for the 'Simple Microservice permissions' policy template
 
-e. Click Create Function
+
+- Click Create Function
 
 
 ### Step 8:  Change the function's code.
