@@ -55,9 +55,11 @@ In order to follow along you will need:
 
 ## Step 3b (Optional): Make your S3 bucket public.
 
-If you are using an existing bucket, you must make it public in order to enable static website hosting.
+If you are using an existing bucket, you must make it public in order for Step 4 to work.
 
 - Click on the bucket's name within the S3 console.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640">
 
 - Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
 
