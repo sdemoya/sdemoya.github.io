@@ -61,7 +61,7 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640">
 
-- Click the ***Permissions*** tab. This will automatically open on ***Block public access.***
+- Click the ***Permissions*** tab. This will automatically open on ***Block public access***.
 
 - Click ***Edit***. 
 
@@ -69,7 +69,8 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 - Uncheck ***Block all public access.***
 
-- Click ***Save*** in the top right corner. 
+- Click ***Save***. 
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
 
 - Clicking ***Save*** will prompt a confirmation window. Type ***confirm*** as directed, and then click click ***Confirm***.
@@ -81,7 +82,9 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 ## Step 4: Enable Static website hosting.
 
-- Click on the bucket name.
+- From the S3 console, click on the bucket name.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640">
 
 - Select **Properties** in in the top menu bar.
 
@@ -106,12 +109,12 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 - Navigate to Lambda by typing it into the search bar or looking under the ***Services*** drop-down menu under the ***Compute*** category.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
-
 
 ## Step 7: Create a Function.
 
 - Click ***Create function***.
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640">
 
 - Select ***Author from scratch***.
 
@@ -136,7 +139,7 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 ## Step 8:  Update your Lambda Function.
 
-- Once your function has been created you'll see the ***Designer*** at the top of the page. Scroll down to IDE, ***Function code***.
+- Once your function has been created you'll see the ***Designer*** at the top of the page. Scroll down to the IDE, ***Function code***.
 
 
 
