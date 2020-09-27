@@ -10,8 +10,7 @@ mathjax: "true"
 
 # Data Visualization with Matplotlib
 
-Allow me to demonstrate a few simple visualizations created with Matplotlib,
-a mathmatical plotting library. 
+A few simple visualizations created with Matplotlib, a mathmatical plotting library. 
 
 ### Plotting a Simple Line Graph
 
@@ -45,6 +44,6 @@ ax.axis([0,5, 0, 125])
 plt.show()
 ```
 
-Output from Matplotlib's Viewer:
+Output to Matplotlib's Viewer From Above Code:
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-27-matplotlib/cubes.png" alt="simple line graph">
 
