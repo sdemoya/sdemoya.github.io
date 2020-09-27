@@ -1,6 +1,6 @@
 ---
 title: "Matplotlib"
-date: 2020-08-16
+date: 2020-09-27
 tags: []
 header:
   image: "/images/perceptron/percept.jpg"
