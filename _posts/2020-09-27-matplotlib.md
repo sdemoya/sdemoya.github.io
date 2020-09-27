@@ -1,0 +1,49 @@
+---
+title: "Matplotlib"
+date: 2020-08-16
+tags: []
+header:
+  image: "/images/perceptron/percept.jpg"
+excerpt: "Coming soon..."
+mathjax: "true"
+---
+
+# Data Visualization with Matplotlib
+
+Allow me to demonstrate a few simple visualizations created with Matplotlib,
+a mathmatical plotting library. 
+
+
+Python Code Block:
+`
+`
+
+Python Code Block Output:
+```python
+    import numpy as np
+
+    def test_function(x, y):
+      z = np.sum(x,y)
+      return z
+```
+
+R code block:
+```r
+library(tidyverse)
+df <- read_csv("some_file.csv")
+head(df)
+```
+
+Here's some inline code `x+y`.
+
+Here's an image:
+<img src="{{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg" alt="linearly separable data">
+
+Here's another image using Kramdown:
+![alt]({{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg)
+
+Here's some math:
+
+$$z=x+y$$
+
+You can also put it inline $$z=x+y$$
