@@ -15,10 +15,6 @@ a mathmatical plotting library.
 
 ### Plotting a Simple Line Graph
 
-Output from Matplotlib's Viewer:
-<img src="{{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg" alt="linearly separable data">
-
-
 Python Code Block:
 ```python
 import matplotlib.pyplot as plt
@@ -52,25 +48,3 @@ plt.show()
 Output from Matplotlib's Viewer:
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-27-matplotlib/cubes.png" alt="simple line graph">
 
-
-<!---
-```r
-library(tidyverse)
-df <- read_csv("some_file.csv")
-head(df)
-```
-
-Here's some inline code `x+y`.
-
-Here's an image:
-<img src="{{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg" alt="linearly separable data">
-
-
-Here's another image using Kramdown:
-![alt]({{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg)
-
-Here's some math:
-
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$
