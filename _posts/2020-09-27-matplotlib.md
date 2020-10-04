@@ -4,7 +4,7 @@ date: 2020-09-27
 tags: []
 header:
   image: "/images/perceptron/percept.jpg"
-excerpt: "Coming soon..."
+excerpt: "Demonstrates the use of python and matplotlib to visualize data."
 mathjax: "true"
 ---
 
