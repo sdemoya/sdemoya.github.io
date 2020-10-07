@@ -4,11 +4,11 @@ date: 2020-09-27
 tags: []
 header:
   image: "/images/perceptron/percept.jpg"
-excerpt: "Fun data visualization using Matplotlib"
-mathjax: "true"
----
-
-# Data Visualization with Matplotlib
+  excerpt: "Fun data visualization with Matplotlib."
+  mathjax: "true"
+  ---
+  ## Data Visualization with Matplotlib
+  _____
 
 A few simple visualizations created with Matplotlib, a mathmatical plotting library.
 
