@@ -12,10 +12,10 @@ _____
 
 In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting,  Lambda and API Gateway to deliver dynamic content and optionally, Route53, to register and connect a domain name.
 
-In order to follow along you will need: 
+In order to follow along you will need:
 * an AWS account
 * basic understanding of HTML
-* text editor 
+* text editor
 
 
 ## Step 1: Login to the AWS Management Console.
@@ -35,9 +35,9 @@ In order to follow along you will need:
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640">
 
-- Name your bucket. 
+- Name your bucket.
 
-    If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc. 
+    If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc.
 
     Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all AWS accounts, not just your account.
 
@@ -63,13 +63,13 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 - Click the ***Permissions*** tab. This will automatically open on ***Block public access***.
 
-- Click ***Edit***. 
+- Click ***Edit***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot" width="640">
 
 - Uncheck ***Block all public access.***
 
-- Click ***Save***. 
+- Click ***Save***.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640">
 
@@ -101,7 +101,7 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 ## Step 5: Register your domain. (Optional)
 
-- If you haven't already, register your domain name. It must match the bucket name. 
+- If you haven't already, register your domain name. It must match the bucket name.
 - This process can take up to 72 hours to complete, but it is often finishes before then. As an alernative to registering and connecting a domain name, the S3 bucket will have its own URL.
 
 
@@ -124,7 +124,7 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step7-lambda-1.png" alt="AWS Screenshot" width="640">
 
-- Expand ***Choose or create an execution role*** If this is your first time using Lambda you will need to create a new role. 
+- Expand ***Choose or create an execution role*** If this is your first time using Lambda you will need to create a new role.
 
 - Select ***Create a new role from AWS policy templates***.
 
@@ -143,7 +143,7 @@ If you are using an existing bucket, you must make it public in order for Step 4
 
 
 
-- Delete boiler plate and replace with the below. 
+- Delete boiler plate and replace with the below.
 
 ```
 
@@ -161,7 +161,7 @@ def lambda_handler(event, context):
 
         },
 
-        "body": "Serverless Website" 
+        "body": "Serverless Website"
 
     }
 
@@ -180,7 +180,7 @@ def lambda_handler(event, context):
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-1.png" alt="AWS Screenshot" width="640">
 
-- Add ***API Gateway*** as a trigger.  
+- Add ***API Gateway*** as a trigger.
 
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-12-serverless/step9-triggers-2.png" alt="AWS Screenshot" width="640">
 
@@ -206,7 +206,7 @@ def lambda_handler(event, context):
 
 ## Step 11: Delete the default method.
 
-- Click the ***Any*** method to highlight it under your Lambda function's name. 
+- Click the ***Any*** method to highlight it under your Lambda function's name.
 
 - Click on ***Actions***.
 
@@ -269,7 +269,7 @@ def lambda_handler(event, context):
 
 - Clicking ***Deploy*** in Step 13 automatically redirects you to this page. You may also access this page from the left hand menu within ***API Gateway***.
 
-- Expand ***default***. 
+- Expand ***default***.
 
 - Click on ***Get*** and copy the ***Invoke URL***.
 *Important*: If you do not click on the method before you copy the ***Invoke URL*** and instead, copy the ***Invoke URL*** from the landing page, your website will not work.
@@ -280,7 +280,7 @@ def lambda_handler(event, context):
 
 
 ## Step 15: HTML Files.
-- Create an index.html file, as shown below. 
+- Create an index.html file, as shown below.
 
 ``` HTML
 <html>
@@ -352,14 +352,14 @@ def lambda_handler(event, context):
 
 - Create an error.html file.
 
-`
+```
 <html>
    <head></head>
    <body>
       <h1>404 Page Not Found</h1>
    </body>
 </html>
-`
+```
 
 ## Step 16: Upload your files to your S3 bucket.
 
