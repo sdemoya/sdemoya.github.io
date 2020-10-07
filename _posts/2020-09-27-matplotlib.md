@@ -43,7 +43,7 @@ ax.tick_params(axis='both', which='major', labelsize=15)
 # Define range of axes
 ax.axis([0, 5000, 0, 125000000000])
 
-# Open figure in Matplotlib\'s viewer
+# Open figure in Matplotlib's viewer
 plt.show()
 
 # Automatically saves plot to a file and
