@@ -6,15 +6,16 @@ header:
   image: "/images/perceptron/percept.jpg"
   excerpt: "Fun data visualization with Matplotlib."
   mathjax: "true"
-  ---
-  ## Data Visualization with Matplotlib
-  _____
+---
+## Data Visualization with Matplotlib
+_____
 
 A few simple visualizations created with Matplotlib, a mathmatical plotting library.
 
 ### Plotting a Simple Line Graph
 
 Python Code Block:
+
 ```python
 import matplotlib.pyplot as plt
 
@@ -49,5 +50,6 @@ plt.savefig('cubes.png', bbox_inches='tight')
 ```
 
 Output to Matplotlib's Viewer From Above Code:
+
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-27-matplotlib/cubes.png" alt="simple line graph">
 
