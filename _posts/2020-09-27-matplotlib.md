@@ -4,11 +4,7 @@ date: 2020-09-27
 tags: []
 header:
   image: "/images/perceptron/percept.jpg"
-<<<<<<< HEAD
 excerpt: "Fun data visualization using Matplotlib"
-=======
-excerpt: "Demonstrates the use of python and matplotlib to visualize data."
->>>>>>> 8bce3a8dee2baa7f37e31ec1a077ba361945e014
 mathjax: "true"
 ---
 
