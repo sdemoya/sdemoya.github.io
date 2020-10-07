@@ -42,14 +42,9 @@ ax.axis([0, 5000, 0, 125000000000])
 
 # Open figure in Matplotlib's viewer
 plt.show()
-
-# Automatically saves plot to a file and
-# trims extra whitespace from the figure.
-plt.savefig('cubes.png', bbox_inches='tight')
-
 ```
 
 Output to Matplotlib's Viewer From Above Code:
-
+<br/>
 <img src="{{ site.url }}{{ site.baseurl }}/images/2020-09-27-matplotlib/cubes.png" alt="simple line graph">
 
