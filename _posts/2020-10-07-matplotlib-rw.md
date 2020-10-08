@@ -28,5 +28,5 @@ and visualize it's path.
 ```
 
 Output:
-<img src="{{ site.url }}{{ site.baseurl }}/images/2020-10-07-matplotlib/Pollen1.png" alt="random walk">
+<img src="{{ site.url }}{{ site.baseurl }}/images/2020-10-07-matplotlib-rw/Pollen1.png" alt="random walk">
 
