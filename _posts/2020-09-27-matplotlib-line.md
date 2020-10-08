@@ -1,5 +1,5 @@
 ---
-title: "Matplotlib"
+title: "Plotting a Simple Line Graph with Matplotlib"
 date: 2020-09-27
 tags: []
 header:
@@ -7,10 +7,10 @@ header:
   excerpt: "Fun data visualization with Matplotlib."
   mathjax: "true"
 ---
-## Simple Line Graph with Matplotlib
+## Plotting a Simple Line Graph with Matplotlib
 _____
 
-A few simple visualizations created with Matplotlib, a mathmatical plotting library.
+Demonstrates use of Python and Matplotlib, a mathmatical plotting library to create a line graph. 
 
 Python Code Block:
 
