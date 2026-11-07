@@ -1,0 +1,1014 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.9.0 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE.txt
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Deploy a Serverless Website - Portfolio</title>
+<meta name="description" content="Serverless, Lambda, API Gateway, S3, Route53">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Portfolio">
+<meta property="og:title" content="Deploy a Serverless Website">
+<meta property="og:url" content="http://localhost:4000/serverless/">
+
+
+  <meta property="og:description" content="Serverless, Lambda, API Gateway, S3, Route53">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/images/banner-binary-3441007_1920.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2020-09-12T00:00:00-04:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/serverless/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "Person",
+      "name": "Skye de Moya",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="http://localhost:4000/feed.xml" type="application/atom+xml" rel="alternate" title="Portfolio Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="http://localhost:4000/">Portfolio</a>
+        <ul class="visible-links">
+          
+            
+            <li class="masthead__menu-item">
+              <a href="http://localhost:4000/about/" >About</a>
+            </li>
+          
+        </ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+    <div class="initial-content">
+      
+  
+
+
+
+
+
+
+
+
+
+
+
+<div class="page__hero"
+  style=" "
+>
+  
+    <img src="http://localhost:4000/images/banner-binary-3441007_1920.jpg" alt="Deploy a Serverless Website" class="page__hero-image">
+  
+  
+</div>
+
+
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="http://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="http://localhost:4000/images/headshot_400x400.png" alt="Skye de Moya" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Skye de Moya</h3>
+    
+    
+      <p class="author__bio" itemprop="description">
+        Portfolio
+      </p>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="http://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Los Angeles, CA</span>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://www.linkedin.com/in/skyedemoya" itemprop="sameAs">
+            <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        <li>
+          <a href="https://github.com/sdemoya" itemprop="sameAs">
+            <i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Deploy a Serverless Website">
+    <meta itemprop="description" content="Serverless, Lambda, API Gateway, S3, Route53">
+    <meta itemprop="datePublished" content="September 12, 2020">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Deploy a Serverless Website
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  5 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="deploy-a-serverless-website-with-lambda-api-gateway-s3-and-route53">Deploy a Serverless Website with Lambda, API Gateway, S3 and Route53</h2>
+<hr />
+
+<p>In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting,  Lambda and API Gateway to deliver dynamic content and optionally, Route53, to register and connect a domain name.</p>
+
+<p>In order to follow along you will need:</p>
+<ul>
+  <li>an AWS account</li>
+  <li>basic understanding of HTML</li>
+  <li>text editor</li>
+</ul>
+
+<h2 id="step-1-login-to-the-aws-management-console">Step 1: Login to the AWS Management Console.</h2>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-2-navigate-to-s3">Step 2: Navigate to S3.</h2>
+
+<ul>
+  <li>Navigate to S3 by typing it into the search bar or looking under the <strong><em>Services</em></strong> drop-down menu under the <strong><em>Storage</em></strong> category.</li>
+</ul>
+
+<h2 id="step-3-create-a-new-bucket-in-s3">Step 3: Create a new bucket in S3.</h2>
+
+<ul>
+  <li>Click <strong><em>Create Bucket</em></strong></li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Name your bucket.</p>
+
+    <p>If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc.</p>
+
+    <p>Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all AWS accounts, not just your account.</p>
+
+    <p>Be sure to note the <strong><em>Region</em></strong> for this bucket.  S3, Lambda, and API Gateway are all regional services.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Uncheck <strong><em>Block all public access</em></strong>. This will bring up a warning and prompt you to acknowledge the risks. Select <strong><em>I acknowledge</em></strong>…</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click <strong><em>Create bucket</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-4.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-3b-optional-make-your-s3-bucket-public">Step 3b (Optional): Make your S3 bucket public.</h2>
+
+<p>If you are using an existing bucket, you must make it public in order for Step 4 to work.</p>
+
+<ul>
+  <li>Click on the bucket’s name within the S3 console.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Click the <strong><em>Permissions</em></strong> tab. This will automatically open on <strong><em>Block public access</em></strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Edit</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Uncheck <strong><em>Block all public access.</em></strong></p>
+  </li>
+  <li>
+    <p>Click <strong><em>Save</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Clicking <strong><em>Save</em></strong> will prompt a confirmation window. Type <strong><em>confirm</em></strong> as directed, and then click click <strong><em>Confirm</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-4-enable-static-website-hosting">Step 4: Enable Static website hosting.</h2>
+
+<ul>
+  <li>From the S3 console, click on the bucket name.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Select <strong>Properties</strong> in in the top menu bar.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step4-statichosting-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Select <strong><em>Static website hosting</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step4-statichosting-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Type in index.html and error.html where prompted and click <strong><em>Save</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-5-register-your-domain-optional">Step 5: Register your domain. (Optional)</h2>
+
+<ul>
+  <li>If you haven’t already, register your domain name. It must match the bucket name.</li>
+  <li>This process can take up to 72 hours to complete, but it is often finishes before then. As an alernative to registering and connecting a domain name, the S3 bucket will have its own URL.</li>
+</ul>
+
+<h2 id="step-6-navigate-to-the-lambda-console">Step 6: Navigate to the Lambda console.</h2>
+
+<ul>
+  <li>Navigate to Lambda by typing it into the search bar or looking under the <strong><em>Services</em></strong> drop-down menu under the <strong><em>Compute</em></strong> category.</li>
+</ul>
+
+<h2 id="step-7-create-a-function">Step 7: Create a Function.</h2>
+
+<ul>
+  <li>Click <strong><em>Create function</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Select <strong><em>Author from scratch</em></strong>.</p>
+  </li>
+  <li>
+    <p>Name you function.</p>
+  </li>
+  <li>
+    <p>For runtime select <strong><em>Python 3.6</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step7-lambda-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Expand <strong><em>Choose or create an execution role</em></strong> If this is your first time using Lambda you will need to create a new role.</p>
+  </li>
+  <li>
+    <p>Select <strong><em>Create a new role from AWS policy templates</em></strong>.</p>
+  </li>
+  <li>
+    <p>Name it.</p>
+  </li>
+  <li>
+    <p>Search for the <strong><em>Simple microservice permissions</em></strong> policy template.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Create Function</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step7-lambda-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-8--update-your-lambda-function">Step 8:  Update your Lambda Function.</h2>
+
+<ul>
+  <li>
+    <p>Once your function has been created you’ll see the <strong><em>Designer</em></strong> at the top of the page. Scroll down to the IDE, <strong><em>Function code</em></strong>.</p>
+  </li>
+  <li>
+    <p>Delete boiler plate and replace with the below.</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+def lambda_handler(event, context):
+
+    print("In lambda handler")
+
+    resp = {
+
+        "statusCode": 200,
+
+        "headers": {
+
+            "Access-Control-Allow-Origin": "*",
+
+        },
+
+        "body": "Serverless Website"
+
+    }
+
+    return resp
+
+</code></pre></div></div>
+
+<ul>
+  <li>Click <strong><em>Save</em></strong> within <strong><em>Function code</em></strong>. This should cause the other <strong><em>Save</em></strong> function to turn gray.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-9-add-trigger">Step 9: Add Trigger.</h2>
+
+<ul>
+  <li>Scroll back up to the <strong><em>Designer</em></strong> and click on <strong><em>Add trigger</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step9-triggers-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Add <strong><em>API Gateway</em></strong> as a trigger.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step9-triggers-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Select <strong><em>Rest API</em></strong>.</p>
+  </li>
+  <li>
+    <p><strong><em>Security</em></strong> is left open in this demonstration, however, that is not best practice. Refer to <a href="https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&amp;cards-all.sort-order=desc">AWS best practices</a> for more information and choose the solution that works best for your use case.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click <strong><em>Add</em></strong>.</li>
+</ul>
+
+<h2 id="step-10-open-api-gateway">Step 10: Open API Gateway.</h2>
+
+<ul>
+  <li>Click on the hyper-linked title of your API.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step10-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>The link will open API Gateway as shown below.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step10-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-11-delete-the-default-method">Step 11: Delete the default method.</h2>
+
+<ul>
+  <li>
+    <p>Click the <strong><em>Any</em></strong> method to highlight it under your Lambda function’s name.</p>
+  </li>
+  <li>
+    <p>Click on <strong><em>Actions</em></strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Delete Method</em></strong> in the drop-down menu.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step11-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Confirm your delete.</li>
+</ul>
+
+<h2 id="step-12-create-new-method">Step 12: Create New Method.</h2>
+
+<ul>
+  <li>Click <strong><em>Actions</em></strong> and select <strong><em>Create Method</em></strong> from the drop-down menu.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Under your function’s name, a drop-down menu will be available.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click on <strong><em>Get</em></strong> and then click on the check mark next to <strong><em>Get</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p><strong><em>Integration type</em></strong> should automatically select <strong><em>Lambda Function</em></strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong><em>Use Lambda Proxy integration</em></strong>.</p>
+  </li>
+  <li>
+    <p>If you are in the correct region, your Lambda function’s name will auto populate when you start typing its title.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-4.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Leave <strong><em>Use Default Timeout</em></strong> selected.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-5.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click <strong><em>Save</em></strong>. This will prompt a confirmation window, which will display your Lambda Function’s ARN. Click <strong><em>OK</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-6.png" alt="AWS Screenshot" width="640" /></p>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-7.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-13-deploy-api">Step 13: Deploy API.</h2>
+
+<ul>
+  <li>From the <strong><em>Actions</em></strong> drop-down menu, click <strong><em>Deploy API</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step13-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>For the deployment stage select <strong><em>Default</em></strong>.</p>
+  </li>
+  <li>
+    <p>You can enter whatever description you would like.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Deploy</em></strong>. This will redirect you to <strong><em>Stages</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step13-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-14-stages">Step 14: Stages.</h2>
+
+<ul>
+  <li>
+    <p>Clicking <strong><em>Deploy</em></strong> in Step 13 automatically redirects you to this page. You may also access this page from the left hand menu within <strong><em>API Gateway</em></strong>.</p>
+  </li>
+  <li>
+    <p>Expand <strong><em>default</em></strong>.</p>
+  </li>
+  <li>
+    <p>Click on <strong><em>Get</em></strong> and copy the <strong><em>Invoke URL</em></strong>.
+<em>Important</em>: If you do not click on the method before you copy the <strong><em>Invoke URL</em></strong> and instead, copy the <strong><em>Invoke URL</em></strong> from the landing page, your website will not work.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step14-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step14-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-15-html-files">Step 15: HTML Files.</h2>
+<ul>
+  <li>Create an index.html file, as shown below.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 &amp;&amp; this.status == 200) {
+                    document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);
+                xhttp.send();
+
+            }
+
+        &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;div align="center"&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;h1&gt;Hello &lt;span id="my-demo"&gt;World!&lt;/span&gt;&lt;/h1&gt;
+        &lt;button onclick="myFunction()"&gt;Click me&lt;/button&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Paste the <strong><em>Invoke URL</em></strong> that you copied in Step 14 replacing “YOUR-API-GATEWAY-LINK” in <code class="language-plaintext highlighter-rouge">xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 &amp;&amp; this.status == 200) {
+                    document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "https://dci4zny6p2.execute-api.us-west-1.amazonaws.com/default/serverlessSiteFunction", true);
+                xhttp.send();
+
+            }
+
+        &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;div align="center"&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;h1&gt;Hello &lt;span id="my-demo"&gt;World!&lt;/span&gt;&lt;/h1&gt;
+        &lt;button onclick="myFunction()"&gt;Click me&lt;/button&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Create an error.html file.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+   &lt;head&gt;&lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;404 Page Not Found&lt;/h1&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="step-16-upload-your-files-to-your-s3-bucket">Step 16: Upload your files to your S3 bucket.</h2>
+
+<ul>
+  <li>
+    <p>Navigate back to S3.</p>
+  </li>
+  <li>
+    <p>Click on your bucket.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Upload</em></strong>.</p>
+  </li>
+  <li>
+    <p>Drag and drop your html files or use the <strong><em>Add files</em></strong> button.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Next</em></strong>.</p>
+  </li>
+  <li>
+    <p>Allow public access to your items under the permissions tab.</p>
+  </li>
+  <li>
+    <p>Select storage.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Upload</em></strong>.</p>
+  </li>
+</ul>
+
+<h2 id="step-17-create-a-record-set-for-your-domain-in-route53-optional">Step 17: Create a record set for your domain in Route53. (Optional)</h2>
+
+<ul>
+  <li>
+    <p>Navigate to <strong><em>Route53</em></strong>, under Networking.</p>
+  </li>
+  <li>
+    <p>Click on <strong><em>Hosted Zones</em></strong></p>
+  </li>
+  <li>
+    <p>Select your domain.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Create Record Set</em></strong></p>
+  </li>
+  <li>
+    <p>Select <strong><em>Alias</em></strong>. Your S3 website should auto-populate. If it does not auto-populate that means that your bucket name and domain name do not match. Refer back to Step 5.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Create</em></strong>. This will create an A record.</p>
+  </li>
+  <li>
+    <p>Give the DNS cache time to update and then your website should be visible from your domain.</p>
+  </li>
+</ul>
+
+<h2 id="step-18-visit-your-site">Step 18: Visit your site!</h2>
+
+<ul>
+  <li>
+    <p>If you need to access the S3 static website hosting URL, you can always get it under <strong><em>Properites</em></strong> within your bucket.</p>
+  </li>
+  <li>
+    <p>Click on the button on your website. This will send a request to API Gateway and display dynamic content.</p>
+  </li>
+</ul>
+
+<p>You did it. Well done!</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="http://localhost:4000/tags/#aws" class="page__taxonomy-item" rel="tag">aws</a><span class="sep">, </span>
+    
+      
+      
+      <a href="http://localhost:4000/tags/#documentation" class="page__taxonomy-item" rel="tag">documentation</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2020-09-12T00:00:00-04:00">September 12, 2020</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Deploy+a+Serverless+Website%20http%3A%2F%2Flocalhost%3A4000%2Fserverless%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fserverless%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://plus.google.com/share?url=http%3A%2F%2Flocalhost%3A4000%2Fserverless%2F" class="btn btn--google-plus" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Google Plus"><i class="fab fa-fw fa-google-plus" aria-hidden="true"></i><span> Google+</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fserverless%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="http://localhost:4000/matplotlib-line/" class="pagination--pager" title="Plotting a Simple Line Graph with Matplotlib
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/matplotlib-rw/" rel="permalink">Random Walk with Matplotlib
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Random Walk Data Visualization with Matplotlib
+
+
+The goal of this post is to walk you through using a random walk to create
+the plot points for a visualizati...</p>
+  </article>
+</div>
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="http://localhost:4000/matplotlib-line/" rel="permalink">Plotting a Simple Line Graph with Matplotlib
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Plotting a Simple Line Graph with Matplotlib
+
+
+</p>
+  </article>
+</div>
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="https://github.com/sdemoya"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    
+    <li><a href="http://localhost:4000/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2026 Skye de Moya. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="http://localhost:4000/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+
+
+
+
+
+
+
+
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+  </body>
+</html>

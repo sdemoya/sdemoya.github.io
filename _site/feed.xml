@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-11-07T17:47:18-05:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Portfolio</title><subtitle>AWS Cloud Infrastructue &amp; Technical Documentation</subtitle><author><name>Skye de Moya</name></author><entry><title type="html">Plotting a Simple Line Graph with Matplotlib</title><link href="http://localhost:4000/matplotlib-line/" rel="alternate" type="text/html" title="Plotting a Simple Line Graph with Matplotlib" /><published>2020-09-27T00:00:00-04:00</published><updated>2020-09-27T00:00:00-04:00</updated><id>http://localhost:4000/matplotlib-line</id><content type="html" xml:base="http://localhost:4000/matplotlib-line/"><![CDATA[<h2 id="plotting-a-simple-line-graph-with-matplotlib">Plotting a Simple Line Graph with Matplotlib</h2>
+<hr />
+
+<p>Demonstrates use of Python and Matplotlib, a mathmatical plotting library to create a line graph.</p>
+
+<p>Python Code Block:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="n">x_values</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">5000</span><span class="p">)</span>
+<span class="n">y_values</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">3</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">x_values</span><span class="p">]</span>
+
+<span class="c1"># styles figure
+</span><span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'fivethirtyeight'</span><span class="p">)</span>
+
+<span class="c1"># function generates plots in the same figure
+</span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="c1"># fig represents the entire figure
+# ax represents a single plot within the figure
+</span><span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x_values</span><span class="p">,</span> <span class="n">y_values</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">y_values</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="n">plt</span><span class="p">.</span><span class="n">cm</span><span class="p">.</span><span class="n">Blues</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Set titles
+</span><span class="n">ax</span><span class="p">.</span><span class="n">set_title</span><span class="p">(</span><span class="s">'Cubed Numbers'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s">'Value'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s">'Cube of Value'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="s">'both'</span><span class="p">,</span> <span class="n">which</span><span class="o">=</span><span class="s">'major'</span><span class="p">,</span> <span class="n">labelsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="c1"># Define range of axes
+</span><span class="n">ax</span><span class="p">.</span><span class="n">axis</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">5000</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">125000000000</span><span class="p">])</span>
+
+<span class="c1"># Open figure in Matplotlib's viewer
+</span><span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Output to Matplotlib’s Viewer:
+<br />
+<img src="http://localhost:4000/images/2020-09-27-matplotlib/cubes.png" alt="simple line graph" /></p>]]></content><author><name>Skye de Moya</name></author><summary type="html"><![CDATA[Plotting a Simple Line Graph with Matplotlib]]></summary></entry><entry><title type="html">Random Walk with Matplotlib</title><link href="http://localhost:4000/matplotlib-rw/" rel="alternate" type="text/html" title="Random Walk with Matplotlib" /><published>2020-09-27T00:00:00-04:00</published><updated>2020-09-27T00:00:00-04:00</updated><id>http://localhost:4000/matplotlib-rw</id><content type="html" xml:base="http://localhost:4000/matplotlib-rw/"><![CDATA[<h2 id="random-walk-data-visualization-with-matplotlib">Random Walk Data Visualization with Matplotlib</h2>
+<hr />
+<p>The goal of this post is to <strong>walk</strong> you through using a random walk to create
+the plot points for a visualization representing a piece of pollen’s floating
+on water.</p>
+
+<h3 id="random-walk-class">Random Walk Class</h3>
+<p>It all starts with a RandomWalk() Class that we can reuse for each visualiztion.</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">choice</span>
+
+<span class="k">class</span> <span class="nc">RandomWalk</span><span class="p">:</span>
+    <span class="s">"""A class to generate random walks."""</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_points</span><span class="o">=</span><span class="mi">5000</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">num_points</span> <span class="o">=</span> <span class="n">num_points</span>
+
+        <span class="c1"># All walks start at (0,0).
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">x_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">y_values</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="nf">fill_walk</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="s">"""Calculate points in a random walk."""</span>
+
+        <span class="c1"># Keep taking steps until the walk reaches the desired length.
+</span>        <span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">x_values</span><span class="p">)</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="p">.</span><span class="n">num_points</span><span class="p">:</span>
+
+            <span class="c1"># Decide which direction and how far to go.
+</span>            <span class="n">x_direction</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">x_distance</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+            <span class="n">x_step</span> <span class="o">=</span> <span class="n">x_direction</span> <span class="o">*</span> <span class="n">x_distance</span>
+
+            <span class="n">y_direction</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+            <span class="n">y_distance</span> <span class="o">=</span> <span class="n">choice</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+            <span class="n">y_step</span> <span class="o">=</span> <span class="n">y_direction</span> <span class="o">*</span> <span class="n">y_distance</span>
+
+            <span class="c1"># Reject moves that go nowhere.
+</span>            <span class="k">if</span> <span class="n">x_step</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y_step</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Calculate the new position.
+</span>            <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">x_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">x_step</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">y_values</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">y_step</span>
+
+            <span class="c1"># Append the values.
+</span>            <span class="bp">self</span><span class="p">.</span><span class="n">x_values</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">y_values</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h3 id="pollen-plot-1-simple">Pollen Plot 1: Simple</h3>
+<p>Now that we have our class, it’s time to instantiate an object from that class
+and visualize it’s path.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
+
+<span class="kn">from</span> <span class="nn">random_walk</span> <span class="kn">import</span> <span class="n">RandomWalk</span>
+
+<span class="c1"># Make a random walk.
+</span><span class="n">rw</span> <span class="o">=</span> <span class="n">RandomWalk</span><span class="p">()</span>
+<span class="n">rw</span><span class="p">.</span><span class="n">fill_walk</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'classic'</span><span class="p">)</span>
+
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="p">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">rw</span><span class="p">.</span><span class="n">x_values</span><span class="p">,</span> <span class="n">rw</span><span class="p">.</span><span class="n">y_values</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="p">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div></div>
+
+<p>Output:
+<img src="http://localhost:4000/images/2020-10-07-matplotlib-rw/Pollen1.png" alt="random walk" /></p>]]></content><author><name>Skye de Moya</name></author><summary type="html"><![CDATA[Random Walk Data Visualization with Matplotlib The goal of this post is to walk you through using a random walk to create the plot points for a visualization representing a piece of pollen’s floating on water.]]></summary></entry><entry><title type="html">Deploy a Serverless Website</title><link href="http://localhost:4000/serverless/" rel="alternate" type="text/html" title="Deploy a Serverless Website" /><published>2020-09-12T00:00:00-04:00</published><updated>2020-09-12T00:00:00-04:00</updated><id>http://localhost:4000/serverless</id><content type="html" xml:base="http://localhost:4000/serverless/"><![CDATA[<h2 id="deploy-a-serverless-website-with-lambda-api-gateway-s3-and-route53">Deploy a Serverless Website with Lambda, API Gateway, S3 and Route53</h2>
+<hr />
+
+<p>In this tutorial, you will learn how to deploy a serverless website utilizing S3 for static website hosting,  Lambda and API Gateway to deliver dynamic content and optionally, Route53, to register and connect a domain name.</p>
+
+<p>In order to follow along you will need:</p>
+<ul>
+  <li>an AWS account</li>
+  <li>basic understanding of HTML</li>
+  <li>text editor</li>
+</ul>
+
+<h2 id="step-1-login-to-the-aws-management-console">Step 1: Login to the AWS Management Console.</h2>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step1-console.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-2-navigate-to-s3">Step 2: Navigate to S3.</h2>
+
+<ul>
+  <li>Navigate to S3 by typing it into the search bar or looking under the <strong><em>Services</em></strong> drop-down menu under the <strong><em>Storage</em></strong> category.</li>
+</ul>
+
+<h2 id="step-3-create-a-new-bucket-in-s3">Step 3: Create a new bucket in S3.</h2>
+
+<ul>
+  <li>Click <strong><em>Create Bucket</em></strong></li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Name your bucket.</p>
+
+    <p>If you intend to use your own domain name, the bucket name must match the second-level domain name exactly. That is, the part of the domain before .com, .org, .edu, etc.</p>
+
+    <p>Additionally, remember that bucket names must be globally unique. Globally meaning, unique across all AWS accounts, not just your account.</p>
+
+    <p>Be sure to note the <strong><em>Region</em></strong> for this bucket.  S3, Lambda, and API Gateway are all regional services.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Uncheck <strong><em>Block all public access</em></strong>. This will bring up a warning and prompt you to acknowledge the risks. Select <strong><em>I acknowledge</em></strong>…</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click <strong><em>Create bucket</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3-createbucket-4.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-3b-optional-make-your-s3-bucket-public">Step 3b (Optional): Make your S3 bucket public.</h2>
+
+<p>If you are using an existing bucket, you must make it public in order for Step 4 to work.</p>
+
+<ul>
+  <li>Click on the bucket’s name within the S3 console.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Click the <strong><em>Permissions</em></strong> tab. This will automatically open on <strong><em>Block public access</em></strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Edit</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Uncheck <strong><em>Block all public access.</em></strong></p>
+  </li>
+  <li>
+    <p>Click <strong><em>Save</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Clicking <strong><em>Save</em></strong> will prompt a confirmation window. Type <strong><em>confirm</em></strong> as directed, and then click click <strong><em>Confirm</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-4.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-4-enable-static-website-hosting">Step 4: Enable Static website hosting.</h2>
+
+<ul>
+  <li>From the S3 console, click on the bucket name.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step3b-public-0.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Select <strong>Properties</strong> in in the top menu bar.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step4-statichosting-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Select <strong><em>Static website hosting</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step4-statichosting-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Type in index.html and error.html where prompted and click <strong><em>Save</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step4-statichosting-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-5-register-your-domain-optional">Step 5: Register your domain. (Optional)</h2>
+
+<ul>
+  <li>If you haven’t already, register your domain name. It must match the bucket name.</li>
+  <li>This process can take up to 72 hours to complete, but it is often finishes before then. As an alernative to registering and connecting a domain name, the S3 bucket will have its own URL.</li>
+</ul>
+
+<h2 id="step-6-navigate-to-the-lambda-console">Step 6: Navigate to the Lambda console.</h2>
+
+<ul>
+  <li>Navigate to Lambda by typing it into the search bar or looking under the <strong><em>Services</em></strong> drop-down menu under the <strong><em>Compute</em></strong> category.</li>
+</ul>
+
+<h2 id="step-7-create-a-function">Step 7: Create a Function.</h2>
+
+<ul>
+  <li>Click <strong><em>Create function</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step6-lambda-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Select <strong><em>Author from scratch</em></strong>.</p>
+  </li>
+  <li>
+    <p>Name you function.</p>
+  </li>
+  <li>
+    <p>For runtime select <strong><em>Python 3.6</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step7-lambda-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Expand <strong><em>Choose or create an execution role</em></strong> If this is your first time using Lambda you will need to create a new role.</p>
+  </li>
+  <li>
+    <p>Select <strong><em>Create a new role from AWS policy templates</em></strong>.</p>
+  </li>
+  <li>
+    <p>Name it.</p>
+  </li>
+  <li>
+    <p>Search for the <strong><em>Simple microservice permissions</em></strong> policy template.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Create Function</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step7-lambda-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-8--update-your-lambda-function">Step 8:  Update your Lambda Function.</h2>
+
+<ul>
+  <li>
+    <p>Once your function has been created you’ll see the <strong><em>Designer</em></strong> at the top of the page. Scroll down to the IDE, <strong><em>Function code</em></strong>.</p>
+  </li>
+  <li>
+    <p>Delete boiler plate and replace with the below.</p>
+  </li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+def lambda_handler(event, context):
+
+    print("In lambda handler")
+
+    resp = {
+
+        "statusCode": 200,
+
+        "headers": {
+
+            "Access-Control-Allow-Origin": "*",
+
+        },
+
+        "body": "Serverless Website"
+
+    }
+
+    return resp
+
+</code></pre></div></div>
+
+<ul>
+  <li>Click <strong><em>Save</em></strong> within <strong><em>Function code</em></strong>. This should cause the other <strong><em>Save</em></strong> function to turn gray.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step8-lambda-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-9-add-trigger">Step 9: Add Trigger.</h2>
+
+<ul>
+  <li>Scroll back up to the <strong><em>Designer</em></strong> and click on <strong><em>Add trigger</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step9-triggers-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Add <strong><em>API Gateway</em></strong> as a trigger.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step9-triggers-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>Select <strong><em>Rest API</em></strong>.</p>
+  </li>
+  <li>
+    <p><strong><em>Security</em></strong> is left open in this demonstration, however, that is not best practice. Refer to <a href="https://aws.amazon.com/architecture/security-identity-compliance/?cards-all.sort-by=item.additionalFields.sortDate&amp;cards-all.sort-order=desc">AWS best practices</a> for more information and choose the solution that works best for your use case.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step9-triggers-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click <strong><em>Add</em></strong>.</li>
+</ul>
+
+<h2 id="step-10-open-api-gateway">Step 10: Open API Gateway.</h2>
+
+<ul>
+  <li>Click on the hyper-linked title of your API.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step10-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>The link will open API Gateway as shown below.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step10-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-11-delete-the-default-method">Step 11: Delete the default method.</h2>
+
+<ul>
+  <li>
+    <p>Click the <strong><em>Any</em></strong> method to highlight it under your Lambda function’s name.</p>
+  </li>
+  <li>
+    <p>Click on <strong><em>Actions</em></strong>.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Delete Method</em></strong> in the drop-down menu.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step11-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Confirm your delete.</li>
+</ul>
+
+<h2 id="step-12-create-new-method">Step 12: Create New Method.</h2>
+
+<ul>
+  <li>Click <strong><em>Actions</em></strong> and select <strong><em>Create Method</em></strong> from the drop-down menu.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Under your function’s name, a drop-down menu will be available.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click on <strong><em>Get</em></strong> and then click on the check mark next to <strong><em>Get</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-3.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p><strong><em>Integration type</em></strong> should automatically select <strong><em>Lambda Function</em></strong>.</p>
+  </li>
+  <li>
+    <p>Select <strong><em>Use Lambda Proxy integration</em></strong>.</p>
+  </li>
+  <li>
+    <p>If you are in the correct region, your Lambda function’s name will auto populate when you start typing its title.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-4.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Leave <strong><em>Use Default Timeout</em></strong> selected.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-5.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>Click <strong><em>Save</em></strong>. This will prompt a confirmation window, which will display your Lambda Function’s ARN. Click <strong><em>OK</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-6.png" alt="AWS Screenshot" width="640" /></p>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step12-api-7.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-13-deploy-api">Step 13: Deploy API.</h2>
+
+<ul>
+  <li>From the <strong><em>Actions</em></strong> drop-down menu, click <strong><em>Deploy API</em></strong>.</li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step13-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<ul>
+  <li>
+    <p>For the deployment stage select <strong><em>Default</em></strong>.</p>
+  </li>
+  <li>
+    <p>You can enter whatever description you would like.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Deploy</em></strong>. This will redirect you to <strong><em>Stages</em></strong>.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step13-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-14-stages">Step 14: Stages.</h2>
+
+<ul>
+  <li>
+    <p>Clicking <strong><em>Deploy</em></strong> in Step 13 automatically redirects you to this page. You may also access this page from the left hand menu within <strong><em>API Gateway</em></strong>.</p>
+  </li>
+  <li>
+    <p>Expand <strong><em>default</em></strong>.</p>
+  </li>
+  <li>
+    <p>Click on <strong><em>Get</em></strong> and copy the <strong><em>Invoke URL</em></strong>.
+<em>Important</em>: If you do not click on the method before you copy the <strong><em>Invoke URL</em></strong> and instead, copy the <strong><em>Invoke URL</em></strong> from the landing page, your website will not work.</p>
+  </li>
+</ul>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step14-api-1.png" alt="AWS Screenshot" width="640" /></p>
+
+<p><img src="http://localhost:4000/images/2020-09-12-serverless/step14-api-2.png" alt="AWS Screenshot" width="640" /></p>
+
+<h2 id="step-15-html-files">Step 15: HTML Files.</h2>
+<ul>
+  <li>Create an index.html file, as shown below.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 &amp;&amp; this.status == 200) {
+                    document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);
+                xhttp.send();
+
+            }
+
+        &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;div align="center"&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;h1&gt;Hello &lt;span id="my-demo"&gt;World!&lt;/span&gt;&lt;/h1&gt;
+        &lt;button onclick="myFunction()"&gt;Click me&lt;/button&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Paste the <strong><em>Invoke URL</em></strong> that you copied in Step 14 replacing “YOUR-API-GATEWAY-LINK” in <code class="language-plaintext highlighter-rouge">xhttp.open("GET", "YOUR-API-GATEWAY-LINK", true);</code></li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+    &lt;head&gt;
+        &lt;script&gt;
+            function myFunction() {
+                var xhttp = new XMLHttpRequest();
+                xhttp.onreadystatechange = function() {
+                    if (this.readyState == 4 &amp;&amp; this.status == 200) {
+                    document.getElementById("my-demo").innerHTML = this.responseText;
+                    }
+                };
+                xhttp.open("GET", "https://dci4zny6p2.execute-api.us-west-1.amazonaws.com/default/serverlessSiteFunction", true);
+                xhttp.send();
+
+            }
+
+        &lt;/script&gt;
+    &lt;/head&gt;
+&lt;body&gt;
+    &lt;div align="center"&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+        &lt;h1&gt;Hello &lt;span id="my-demo"&gt;World!&lt;/span&gt;&lt;/h1&gt;
+        &lt;button onclick="myFunction()"&gt;Click me&lt;/button&gt;
+        &lt;br&gt;
+    &lt;/div&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<ul>
+  <li>Create an error.html file.</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;html&gt;
+   &lt;head&gt;&lt;/head&gt;
+   &lt;body&gt;
+      &lt;h1&gt;404 Page Not Found&lt;/h1&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
+
+<h2 id="step-16-upload-your-files-to-your-s3-bucket">Step 16: Upload your files to your S3 bucket.</h2>
+
+<ul>
+  <li>
+    <p>Navigate back to S3.</p>
+  </li>
+  <li>
+    <p>Click on your bucket.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Upload</em></strong>.</p>
+  </li>
+  <li>
+    <p>Drag and drop your html files or use the <strong><em>Add files</em></strong> button.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Next</em></strong>.</p>
+  </li>
+  <li>
+    <p>Allow public access to your items under the permissions tab.</p>
+  </li>
+  <li>
+    <p>Select storage.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Upload</em></strong>.</p>
+  </li>
+</ul>
+
+<h2 id="step-17-create-a-record-set-for-your-domain-in-route53-optional">Step 17: Create a record set for your domain in Route53. (Optional)</h2>
+
+<ul>
+  <li>
+    <p>Navigate to <strong><em>Route53</em></strong>, under Networking.</p>
+  </li>
+  <li>
+    <p>Click on <strong><em>Hosted Zones</em></strong></p>
+  </li>
+  <li>
+    <p>Select your domain.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Create Record Set</em></strong></p>
+  </li>
+  <li>
+    <p>Select <strong><em>Alias</em></strong>. Your S3 website should auto-populate. If it does not auto-populate that means that your bucket name and domain name do not match. Refer back to Step 5.</p>
+  </li>
+  <li>
+    <p>Click <strong><em>Create</em></strong>. This will create an A record.</p>
+  </li>
+  <li>
+    <p>Give the DNS cache time to update and then your website should be visible from your domain.</p>
+  </li>
+</ul>
+
+<h2 id="step-18-visit-your-site">Step 18: Visit your site!</h2>
+
+<ul>
+  <li>
+    <p>If you need to access the S3 static website hosting URL, you can always get it under <strong><em>Properites</em></strong> within your bucket.</p>
+  </li>
+  <li>
+    <p>Click on the button on your website. This will send a request to API Gateway and display dynamic content.</p>
+  </li>
+</ul>
+
+<p>You did it. Well done!</p>]]></content><author><name>Skye de Moya</name></author><category term="documentation" /><category term="aws" /><summary type="html"><![CDATA[Serverless, Lambda, API Gateway, S3, Route53]]></summary></entry></feed>
