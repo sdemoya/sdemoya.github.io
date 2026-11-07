@@ -87,7 +87,6 @@ author:
   name             : "Skye de Moya"
   avatar           : "/images/headshot_400x400.png" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Portfolio"
-  location         : "Los Angeles, CA"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
