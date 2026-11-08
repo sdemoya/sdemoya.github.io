@@ -1,6 +1,6 @@
 ---
 title: "Random Walk with Matplotlib"
-date: 2020-09-27
+date: 2020-10-07
 tags: []
 header:
   image: "/images/perceptron/percept.jpg"
